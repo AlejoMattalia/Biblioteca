@@ -5,7 +5,7 @@ body {
   margin: 0;
 }
 body header {
-  z-index: 10;
+  z-index: 100;
   width: 100%;
   background-color: #000;
   position: fixed;
@@ -32,7 +32,7 @@ body header .lista a:after {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #fff;
+  background-color: #ff7b00;
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.4s ease-out;
@@ -44,11 +44,12 @@ body header .lista a:hover:after {
 body header .contenedor--carrito .boton-registrar {
   letter-spacing: 1px;
   font-weight: bold;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid #ff7b00;
+  color: #ff7b00;
 }
 body header .contenedor--carrito .boton-registrar:hover {
-  color: #000;
+  background-color: #ff7b00;
+  color: #fdfdfd;
 }
 body header .contenedor--carrito a .boton-iniciar {
   text-decoration: none;
@@ -56,6 +57,8 @@ body header .contenedor--carrito a .boton-iniciar {
   font-weight: bold;
 }
 body header .contenedor--carrito a .boton-iniciar:hover {
+  border: #ff6600 1px solid;
+  background-color: #ff7b00;
   color: #000;
 }
 body header .contenedor--carrito .carrito {
@@ -75,8 +78,8 @@ body main .buscador h1 {
   letter-spacing: 3px;
   font-weight: bold;
   padding-top: 120px;
-  border-bottom: #fff 2px solid;
-  color: #fff;
+  border-bottom: #ff7b00 2px solid;
+  color: #ff7b00;
 }
 body main .buscador h2 {
   z-index: 8;
@@ -160,28 +163,31 @@ body main .contenedor--libro .contenedor-libros-generos .generos--libros ul {
   list-style-type: none;
 }
 body main .contenedor--libro .contenedor-libros-generos .generos--libros ul h3 {
+  color: #ff7b00;
   font-size: 50px;
   letter-spacing: 2px;
   font-weight: 900;
   position: relative;
   bottom: 50px;
 }
+body main .contenedor--libro .contenedor-libros-generos .generos--libros ul .flechas {
+  color: #ff7b00;
+}
 body main .contenedor--libro .contenedor-libros-generos .generos--libros ul a {
   text-decoration: none;
 }
 body main .contenedor--libro .contenedor-libros-generos .generos--libros ul a li {
   font-size: 20px;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   color: #a0a0a0;
   letter-spacing: 2px;
   font-weight: 900;
 }
 body main .contenedor--libro .contenedor-libros-generos .generos--libros ul a li:hover {
   color: #fff;
-  list-style-type: disc;
 }
 body main .contenedor--libro .contenedor-libros-generos .libros {
-  margin: 40px 0;
+  margin: 50px 0;
   width: 250px;
   height: 350px;
   transition: 0.5s;
@@ -189,6 +195,11 @@ body main .contenedor--libro .contenedor-libros-generos .libros {
 body main .contenedor--libro .contenedor-libros-generos .libros img {
   width: 100%;
   height: 100%;
+}
+body main .contenedor--libro .contenedor-libros-generos .libros h3 {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 1px;
 }
 body main .contenedor--libro .contenedor-libros-generos .libros:hover {
   transform: scale(1.05);
