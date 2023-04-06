@@ -144,9 +144,9 @@ body main .contenedor--libro h2 {
   margin-top: 80px;
   font-size: 80px;
   letter-spacing: 2px;
-  color: #fff;
+  color: #ff7b00;
   font-weight: bold;
-  border-bottom: #fff 2px solid;
+  border-bottom: #ff7b00 2px solid;
 }
 body main .contenedor--libro .contenedor-libros-generos {
   display: flex;
@@ -200,13 +200,90 @@ body main .contenedor--libro .contenedor-libros-generos .libros h3 {
   font-size: 22px;
   font-weight: 900;
   letter-spacing: 1px;
+  margin-top: 10px;
+  color: #fff;
 }
 body main .contenedor--libro .contenedor-libros-generos .libros:hover {
   transform: scale(1.05);
 }
-body main .contenedor--libro .contenedor-libros-generos h3 {
-  margin-top: 10px;
+body main .contenedor-modal {
+  background-color: rgba(17, 17, 17, 0.7411764706);
+  z-index: 200;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  pointer-events: none;
+  margin-top: 80px;
+  transition: opacity 0.6s;
+}
+body main .contenedor-modal .modal--div {
+  width: 90%;
+  max-width: 700px;
+  max-height: 90%;
+  background-color: #000;
+  margin: auto;
+  border-radius: 6px;
+  padding: 3em 2.5em;
+  display: grid;
+  gap: 1em;
+  place-items: center;
+  grid-auto-columns: 100%;
+}
+body main .contenedor-modal .modal--div .cerrarModal {
   color: #fff;
+  position: relative;
+  bottom: 30px;
+  left: 320px;
+}
+body main .contenedor-modal .modal--div img {
+  width: 250px;
+  height: 100%;
+}
+body main .contenedor-modal .modal--div .cont--img--info {
+  position: relative;
+  bottom: 30px;
+}
+body main .contenedor-modal .modal--div .cont--img--info h2 {
+  margin-bottom: 40px;
+  color: #ff6600;
+  font-weight: 900;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #ff6600;
+}
+body main .contenedor-modal .modal--div .cont--img--info p {
+  font-size: 15px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+body main .contenedor-modal .modal--div .cont--img--info p span {
+  margin-right: 10px;
+  border-bottom: none;
+  font-size: 18px;
+  border-bottom: #fff 1px solid;
+  font-weight: 900;
+}
+body main .contenedor-modal .modal--div .cont-precio-carrito {
+  width: 100%;
+}
+body main .contenedor-modal .modal--div .cont-precio-carrito p {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 900;
+  position: relative;
+  bottom: 15px;
+}
+body main .contenedor-modal .modal--div .cont-precio-carrito button {
+  padding-top: 10px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 900;
+  position: relative;
+  bottom: 25px;
 }
 
 /*# sourceMappingURL=styles.css.map */
