@@ -1,11 +1,14 @@
 const arrayLibros = [
-    { id: 1, imagen: `https://www.fernandovicente.es/wp-content/uploads/2014/11/Cartel-Estudio-en-escarlata-Fernando-Vicente.jpg`, titulo: `Estudio en escarlata`, },
+    {
+        id: 1, imagen: `https://www.fernandovicente.es/wp-content/uploads/2014/11/Cartel-Estudio-en-escarlata-Fernando-Vicente.jpg`, titulo: `Estudio en escarlata`, autor: `Arthur Conan Doyle`, editorial: `Editorial Bululú`, fechaPublicacion: 1887, resumen: `Watson y Holmes se mudan al 221B de Baker Street, donde Watson se enfrenta a Holmes y a su habilidad para la deducción.
+    Holmes es llamado para resolver un asesinato: una casa desierta, un cadáver sin heridas, una misteriosa frase escrita con sangre en la pared...`, precio: `2.949.99`, categoria: `policiacas`
+    },
 
-    { id: 2, imagen: `https://www.planetadelibros.com.ar/usuaris/libros/fotos/260/m_libros/portada___201709181757.jpg`, titulo: `Asesinato en el Orient Express` },
+    { id: 2, imagen: `https://www.planetadelibros.com.ar/usuaris/libros/fotos/260/m_libros/portada___201709181757.jpg`, titulo: `Asesinato en el Orient Express`, autor: `Agatha Christie`, editorial: `Collins Crime Club`, fechaPublicacion: 1934, resumen: `Una niña de tres años llamada Daisy Armstrong fue secuestrada por un hombre llamado Cassetti, asesinó a la niña, a pesar de recibir el rescate de la familia Armstrong. La muerte de la niña devastó a la familia, provocó varias muertes y suicidios.`, precio: `3.890`, categoria: `policiacas` },
 
-    { id: 3, imagen: `https://quelibroleo.com/images/libros/libro_1322105073.jpg`, titulo: `La princesa de hielo` },
+    { id: 3, imagen: `https://quelibroleo.com/images/libros/libro_1322105073.jpg`, titulo: `La princesa de hielo`, autor: `Camilla Läckberg`, editorial: `Maeva`, fechaPublicacion: 2003, resumen: `Erica descubre que su amiga, Alex, acaba de suicidarse. Inicia una investigación y descubre que Alex estaba embarazada. La autopsia revela que su amiga no se suicidó sino que fue asesinada. La policía detiene al principal sospechoso, Anders, un artista fracasado.`, precio: `4.500`, categoria: `policiacas` },
 
-    { id: 4, imagen: `https://www.storytel.com/images/640x640/0002268294.jpg`, titulo: `Las hijas del frío` },
+    { id: 4, imagen: `https://www.storytel.com/images/640x640/0002268294.jpg`, titulo: `Las hijas del frío`, autor: `Camilla Läckberg`, editorial: `OCEANO`, fechaPublicacion: 2005, resumen: `Erica sufre una depresión posparto, encuentra apoyo en Charlotte, madre de Sara. Encuentran el cadáver de Sara, ahogada en el mar. La autopsia revela que fue ahogada en una bañera antes de ser arrojada al mar. Otro niño es atacado; éste vive, pero cunde el pánico en Fjällbacka.`, precio: `4.500`, categoria: `policiacas` },
 
     { id: 5, imagen: `https://contentv2.tap-commerce.com/cover/large/9788494733154_1.jpg?id_com=1113`, titulo: `El faro del fin del mundo` },
 
@@ -67,7 +70,7 @@ function buscadorGeneral() {
     //Recorriendo elementos del buscador
     for (let i = 0; i < li.length; i++) {
 
-        let a = li[i].getElementsByTagName("a")[0];
+        let a = li[i].getElementsByTagName("div")[0];
         let valorTexto = a.textContent || a.innerText;
 
         if (valorTexto.toUpperCase().indexOf(filtro) > -1) {
@@ -88,13 +91,13 @@ function buscadorGeneral() {
 
 const retornarLibrosBuscador = (libro) => {
     return `<li class="li">
-                <a href="">
+                <div id=${libro.id}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-search" viewBox="0 0 16 16">
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                     </svg>
                     ${libro.titulo}
-                </a>
+                </div>
             </li>`;
 }
 
@@ -113,6 +116,8 @@ cargarLibrosBuscador(arrayLibros);
 document.getElementById("buscador").addEventListener("keyup", buscadorGeneral);
 document.getElementById("contenedor_buscador").addEventListener("click", mostrar);
 document.getElementById("ocultar_buscador").addEventListener("click", ocultar);
+
+
 
 
 
@@ -137,26 +142,110 @@ const cargarLibros = (array) => {
 
 cargarLibros(arrayLibros);
 
+//MODAL
+const modalImagenes = () => {
+    const abrirModal = document.querySelectorAll('.libros');
+    const cerrarModal = document.querySelector('.cerrarModal');
+    const modal = document.getElementById("modal");
+
+    abrirModal.forEach(array => {
+
+        array.addEventListener("click", (event) => {
+            const imagenLibros = event.target;
+            const html = imagenLibros.parentNode;
+
+            const id = parseInt(html.id);
+
+            let elementosLibros = arrayLibros.find((el) => el.id === id);
+
+
+            const retornarModal = document.querySelector(".modal--div");
+            retornarModal.innerHTML = `
+            <div class="d-flex flex-row align-items-center cont--img--info">
+                <div class="cont-img-precio text-center">
+                    <img src=${elementosLibros.imagen} alt="">
+                    <p class="precio mt-4">Precio: $${elementosLibros.precio}</p>
+                </div>
+    
+                <div class="ms-5 titulo--modal">
+                    <h2 class="text-center">${elementosLibros.titulo.toUpperCase()}</h2>
+                    <p><span>Autor:</span>${elementosLibros.autor}</p>
+                    <p><span>Editorial:</span>${elementosLibros.editorial}</p>
+                    <p><span>Fecha de publicación:</span>${elementosLibros.fechaPublicacion}</p>
+                    <p>${elementosLibros.resumen}</p>
+                    <button type="button" class="btn btn-light mt-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart4 pb-2" viewBox="0 0 16 16">
+                            <path
+                                d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                        </svg>
+                    AGREGAR AL CARRITO
+                </button>
+                </div>
+            </div>`
+
+            modal.style.opacity = 1;
+            modal.style.pointerEvents = "unset";
+        })
+    });
+
+    cerrarModal.addEventListener("click", () => {
+        modal.style.opacity = 0;
+        modal.style.pointerEvents = "none";
+    })
+
+}
+
 
 
 
 //MODAL
-const abrirModal = document.querySelectorAll('.libros');
-const cerrarModal = document.querySelector('.cerrarModal');
-const modal = document.getElementById("modal");
+const modalBuscador = () => {
+    const abrirModal = document.querySelectorAll('.li');
+    const cerrarModal = document.querySelector('.cerrarModal');
+    const modal = document.getElementById("modal");
+
+    abrirModal.forEach(array => {
+        array.addEventListener("click", (event) => {
+            const tituloLibros = event.target;
+            const id = parseInt(tituloLibros.id);
+
+            let elementosLibros = arrayLibros.find((el) => el.id === id);
+
+            const retornarModal = document.querySelector(".modal--div");
+            retornarModal.innerHTML = `
+            <div class="d-flex flex-row align-items-center cont--img--info">
+                <div class="cont-img-precio text-center">
+                    <img src=${elementosLibros.imagen} alt="">
+                    <p class="precio mt-4">Precio: $${elementosLibros.precio}</p>
+                </div>
+    
+                <div class="ms-5 titulo--modal">
+                    <h2 class="text-center">${elementosLibros.titulo.toUpperCase()}</h2>
+                    <p><span>Autor:</span>${elementosLibros.autor}</p>
+                    <p><span>Editorial:</span>${elementosLibros.editorial}</p>
+                    <p><span>Fecha de publicación:</span>${elementosLibros.fechaPublicacion}</p>
+                    <p>${elementosLibros.resumen}</p>
+                    <button type="button" class="btn btn-light mt-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart4 pb-2" viewBox="0 0 16 16">
+                            <path
+                                d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                        </svg>
+                    AGREGAR AL CARRITO
+                </button>
+                </div>
+            </div>`
 
 
-abrirModal.forEach(array => {
-    array.addEventListener("click", ()=>{
+            modal.style.opacity = 1;
+            modal.style.pointerEvents = "unset";
+        })
+    });
 
-  
+    cerrarModal.addEventListener("click", () => {
+        modal.style.opacity = 0;
+        modal.style.pointerEvents = "none";
+    })
 
-        modal.style.opacity = 1;
-        modal.style.pointerEvents = "unset";
-    })    
-});
-
-cerrarModal.addEventListener("click", ()=>{
-    modal.style.opacity = 0; 
-    modal.style.pointerEvents = "none"; 
-})
+}
+modalImagenes()
+modalBuscador()
