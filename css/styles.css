@@ -43,7 +43,7 @@ body header .lista a:hover:after {
 }
 body header .contenedor--carrito .boton-registrar {
   letter-spacing: 1px;
-  font-weight: bold;
+  font-weight: 900;
   border: 2px solid #039be5;
   color: #039be5;
 }
@@ -54,7 +54,7 @@ body header .contenedor--carrito .boton-registrar:hover {
 body header .contenedor--carrito a .boton-iniciar {
   text-decoration: none;
   letter-spacing: 1px;
-  font-weight: bold;
+  font-weight: 900;
 }
 body header .contenedor--carrito a .boton-iniciar:hover {
   border: #039be5 1px solid;
@@ -80,7 +80,7 @@ body main .buscador h1 {
   z-index: 8;
   font-size: 80px;
   letter-spacing: 3px;
-  font-weight: bold;
+  font-weight: 900;
   padding-top: 120px;
   border-bottom: #039be5 2px solid;
   color: #039be5;
@@ -96,7 +96,7 @@ body main .buscador .contenedor-buscador {
   width: 50%;
 }
 body main .buscador .contenedor-buscador input {
-  border: 3px solid rgb(78, 78, 78);
+  border: 3px solid #039be5;
   color: #000;
   height: 60px;
   border-radius: 20px;
@@ -105,7 +105,7 @@ body main .buscador .contenedor-buscador input {
 }
 body main .buscador .contenedor-buscador input:focus {
   outline: none;
-  border: 6px solid rgb(29, 29, 29);
+  border: 6px solid #039be5;
 }
 body main .buscador ul {
   z-index: 10;
@@ -122,10 +122,9 @@ body main .buscador ul li {
   width: 100%;
   list-style-type: none;
   font-size: 17px;
-  width: 100%;
   text-decoration: none;
   letter-spacing: 2px;
-  font-weight: bold;
+  font-weight: 900;
   color: #000;
 }
 body main .buscador ul li:hover {
@@ -148,7 +147,7 @@ body main .contenedor--libro h2 {
   font-size: 80px;
   letter-spacing: 2px;
   color: #039be5;
-  font-weight: bold;
+  font-weight: 900;
   border-bottom: #039be5 2px solid;
 }
 body main .contenedor--libro .contenedor-libros-generos {
@@ -168,7 +167,7 @@ body main .contenedor--libro .contenedor-libros-generos .generos--libros ul {
 body main .contenedor--libro .contenedor-libros-generos .generos--libros ul h3 {
   color: #039be5;
   font-size: 50px;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
   font-weight: 900;
   position: relative;
   bottom: 50px;
