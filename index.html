@@ -15,6 +15,7 @@
 
 
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/variables.js"></script>
     <script defer src="js/main.js"></script>
     <title>Biblioteca</title>
 
@@ -30,9 +31,7 @@
         </ul>
 
         <div class="contenedor--carrito me-5">
-            <button type="button" class="btn btn-outline-light btn-sm me-4 boton-registrar">Registrarse</button>
-
-            <a href=""><button type="button" class="btn btn-light me-3 boton-iniciar">Iniciar sesión</button></a>
+            <a href="html/inicioSesion.html"><button type="button" class="btn btn-outline-light me-4 boton-iniciar">Iniciar Sesión</button></a>
 
             <a href="">
                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -41,6 +40,7 @@
                         d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
                 </svg>
             </a>
+            <div class="contador" id="contador">0</div>
         </div>
     </header>
 
@@ -79,9 +79,9 @@
                                         d="M6.707 9h4.364c-.536 1.573 2.028 3.806 4.929-.5-2.9-4.306-5.465-2.073-4.929-.5H6.707L4.854 6.146a.5.5 0 1 0-.708.708L5.293 8h-.586L2.854 6.146a.5.5 0 1 0-.708.708L3.293 8h-.586L.854 6.146a.5.5 0 1 0-.708.708L1.793 8.5.146 10.146a.5.5 0 0 0 .708.708L2.707 9h.586l-1.147 1.146a.5.5 0 0 0 .708.708L4.707 9h.586l-1.147 1.146a.5.5 0 0 0 .708.708L6.707 9Z" />
                                 </svg>
                             </a>
-                            <a href="">
-                                <li>Todos los libros</li>
-                            </a>
+                           
+                            <li id="todosLibros">Todos los libros</li>
+                            
                         </div>
 
                         <div class="d-flex flex-row ">
@@ -91,9 +91,9 @@
                                         d="M6.707 9h4.364c-.536 1.573 2.028 3.806 4.929-.5-2.9-4.306-5.465-2.073-4.929-.5H6.707L4.854 6.146a.5.5 0 1 0-.708.708L5.293 8h-.586L2.854 6.146a.5.5 0 1 0-.708.708L3.293 8h-.586L.854 6.146a.5.5 0 1 0-.708.708L1.793 8.5.146 10.146a.5.5 0 0 0 .708.708L2.707 9h.586l-1.147 1.146a.5.5 0 0 0 .708.708L4.707 9h.586l-1.147 1.146a.5.5 0 0 0 .708.708L6.707 9Z" />
                                 </svg>
                             </a>
-                            <a href="">
-                                <li id="policiacas">policíacas</li>
-                            </a>
+                            
+                            <li id="policiacas">policíacas</li>
+                            
                         </div>
 
                         <div class="d-flex flex-row ">
@@ -103,9 +103,9 @@
                                         d="M6.707 9h4.364c-.536 1.573 2.028 3.806 4.929-.5-2.9-4.306-5.465-2.073-4.929-.5H6.707L4.854 6.146a.5.5 0 1 0-.708.708L5.293 8h-.586L2.854 6.146a.5.5 0 1 0-.708.708L3.293 8h-.586L.854 6.146a.5.5 0 1 0-.708.708L1.793 8.5.146 10.146a.5.5 0 0 0 .708.708L2.707 9h.586l-1.147 1.146a.5.5 0 0 0 .708.708L4.707 9h.586l-1.147 1.146a.5.5 0 0 0 .708.708L6.707 9Z" />
                                 </svg>
                             </a>
-                            <a href="">
-                                <li>aventuras</li>
-                            </a>
+                           
+                            <li id="aventuras">aventuras</li>
+                            
                         </div>
 
                         <div class="d-flex flex-row">
@@ -115,9 +115,9 @@
                                         d="M6.707 9h4.364c-.536 1.573 2.028 3.806 4.929-.5-2.9-4.306-5.465-2.073-4.929-.5H6.707L4.854 6.146a.5.5 0 1 0-.708.708L5.293 8h-.586L2.854 6.146a.5.5 0 1 0-.708.708L3.293 8h-.586L.854 6.146a.5.5 0 1 0-.708.708L1.793 8.5.146 10.146a.5.5 0 0 0 .708.708L2.707 9h.586l-1.147 1.146a.5.5 0 0 0 .708.708L4.707 9h.586l-1.147 1.146a.5.5 0 0 0 .708.708L6.707 9Z" />
                                 </svg>
                             </a>
-                            <a href="">
-                                <li>ciencia ficción</li>
-                            </a>
+                         
+                            <li id="cienciaFiccion">ciencia ficción</li>
+                          
                         </div>
 
                         <div class="d-flex flex-row ">
@@ -127,9 +127,9 @@
                                         d="M6.707 9h4.364c-.536 1.573 2.028 3.806 4.929-.5-2.9-4.306-5.465-2.073-4.929-.5H6.707L4.854 6.146a.5.5 0 1 0-.708.708L5.293 8h-.586L2.854 6.146a.5.5 0 1 0-.708.708L3.293 8h-.586L.854 6.146a.5.5 0 1 0-.708.708L1.793 8.5.146 10.146a.5.5 0 0 0 .708.708L2.707 9h.586l-1.147 1.146a.5.5 0 0 0 .708.708L4.707 9h.586l-1.147 1.146a.5.5 0 0 0 .708.708L6.707 9Z" />
                                 </svg>
                             </a>
-                            <a href="">
-                                <li>paranormales</li>
-                            </a>
+                            
+                            <li id="paranormal">paranormales</li>
+                            
                         </div>
 
                         <div class="d-flex flex-row ">
@@ -139,9 +139,9 @@
                                         d="M6.707 9h4.364c-.536 1.573 2.028 3.806 4.929-.5-2.9-4.306-5.465-2.073-4.929-.5H6.707L4.854 6.146a.5.5 0 1 0-.708.708L5.293 8h-.586L2.854 6.146a.5.5 0 1 0-.708.708L3.293 8h-.586L.854 6.146a.5.5 0 1 0-.708.708L1.793 8.5.146 10.146a.5.5 0 0 0 .708.708L2.707 9h.586l-1.147 1.146a.5.5 0 0 0 .708.708L4.707 9h.586l-1.147 1.146a.5.5 0 0 0 .708.708L6.707 9Z" />
                                 </svg>
                             </a>
-                            <a href="">
-                                <li>Románticas</li>
-                            </a>
+                          
+                            <li id="romanticas">Románticas</li>
+                            
                         </div>
                     </ul>
                 </div>
