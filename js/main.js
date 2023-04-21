@@ -1,13 +1,4 @@
-//Contador carrito
-const contador = ()=> {
-    numero = carrito.length;
-    const contador = document.querySelector("#contador");
-    contador.innerHTML = numero;
-}
-
-
-
- //BUSCADOR
+//BUSCADOR
 const buscador = () => {
     let contenedor_buscador = document.getElementById("contenedor_buscador");
     let buscador = document.getElementById("buscador");
@@ -86,7 +77,7 @@ const buscador = () => {
 
 const librosImg = () => {
     //CARTAS DE LOS LIBROS
-    const contenedorLibro = document.querySelector("div.container");
+    const contenedorLibro = document.querySelector("div.containerLibros");
 
     const retornarCardsHtml = (libro) => {
         return `<div class="libros" id=${libro.id}>
@@ -106,113 +97,71 @@ const librosImg = () => {
 
 
     //GENEROS
-    const todosLibros = document.querySelector("#todosLibros");
-    todosLibros.addEventListener("click", ()=> {
-        cargarLibros(arrayLibros);
-        modal();
+    const estilosGeneros = (genero, indice)=>{
+        genero.style.transition = ".5s";
+        genero.style.color = "#fff";
+        genero.style.borderBottom = "#fff 3px solid";
 
-        todosLibros.style.transition = ".5s";
-        todosLibros.style.color = "#fff";
-        todosLibros.style.borderBottom = "#fff 3px solid";
-
-        console.log("")
         newArray = [...arrayGeneros];
-        newArray.splice(0,1);
+        newArray.splice(indice, 1);
         newArray.forEach(el => {
             el.style.color = "#a0a0a0";
             el.style.borderBottom = "none";
         });
+    }
+
+
+    const todosLibros = document.querySelector("#todosLibros");
+    todosLibros.addEventListener("click", () => {
+        cargarLibros(arrayLibros);
+        modal();
+
+        estilosGeneros(todosLibros, 0);
     });
 
     const policiacas = document.querySelector("#policiacas");
-    policiacas.addEventListener("click", ()=>{
+    policiacas.addEventListener("click", () => {
         const arrayPoliciacas = arrayLibros.filter((el) => el.categoria === "policiacas");
         cargarLibros(arrayPoliciacas);
         modal();
 
-        policiacas.style.transition = ".5s";
-        policiacas.style.color = "#fff";
-        policiacas.style.borderBottom = "#fff 3px solid";
-
-        console.log("")
-        newArray = [...arrayGeneros];
-        newArray.splice(1,1);
-        newArray.forEach(el => {
-            el.style.color = "#a0a0a0";
-            el.style.borderBottom = "none";
-        });
+        estilosGeneros(policiacas, 1);
     });
 
     const aventuras = document.querySelector("#aventuras");
-    aventuras.addEventListener("click", ()=> {
+    aventuras.addEventListener("click", () => {
         const arrayAventuras = arrayLibros.filter((el) => el.categoria === "aventura");
         cargarLibros(arrayAventuras);
         modal();
-        
-        aventuras.style.transition = ".5s";
-        aventuras.style.color = "#fff";
-        aventuras.style.borderBottom = "#fff 3px solid";
 
-        newArray = [...arrayGeneros];
-        newArray.splice(2,1);
-        newArray.forEach(el => {
-            el.style.color = "#a0a0a0";
-            el.style.borderBottom = "none";
-        });
+        estilosGeneros(aventuras, 2);
     });
 
     const cienciaFiccion = document.querySelector("#cienciaFiccion");
-    cienciaFiccion.addEventListener("click", ()=> {
+    cienciaFiccion.addEventListener("click", () => {
         const arrayCienciaFiccion = arrayLibros.filter((el) => el.categoria === "ciencia ficcion");
         cargarLibros(arrayCienciaFiccion);
         modal();
 
-        cienciaFiccion.style.transition = ".5s";
-        cienciaFiccion.style.color = "#fff";
-        cienciaFiccion.style.borderBottom = "#fff 3px solid";
-
-        newArray = [...arrayGeneros];
-        newArray.splice(3,1);
-        newArray.forEach(el => {
-            el.style.color = "#a0a0a0";
-            el.style.borderBottom = "none";
-        });
+        estilosGeneros(cienciaFiccion, 3);
     });
 
     const paranormal = document.querySelector("#paranormal");
-    paranormal.addEventListener("click", ()=>{
+    paranormal.addEventListener("click", () => {
         const arrayParanormal = arrayLibros.filter((el) => el.categoria === "paranormales");
         cargarLibros(arrayParanormal);
         modal();
 
-        paranormal.style.transition = ".5s";
-        paranormal.style.color = "#fff";
-        paranormal.style.borderBottom = "#fff 3px solid";
-
-        newArray = [...arrayGeneros];
-        newArray.splice(4,1);
-        newArray.forEach(el => {
-            el.style.color = "#a0a0a0";
-            el.style.borderBottom = "none";
-        });
+        estilosGeneros(paranormal, 4);
     });
 
     const romanticas = document.querySelector("#romanticas");
-    romanticas.addEventListener("click", ()=> {
+    romanticas.addEventListener("click", () => {
         const arrayRomanticas = arrayLibros.filter((el) => el.categoria === "romanticas");
         cargarLibros(arrayRomanticas);
         modal();
 
-        romanticas.style.transition = ".5s";
-        romanticas.style.color = "#fff";
-        romanticas.style.borderBottom = "#fff 3px solid";
-
-        newArray = [...arrayGeneros];
-        newArray.splice(5,1);
-        newArray.forEach(el => {
-            el.style.color = "#a0a0a0";
-            el.style.borderBottom = "none";
-        });
+        estilosGeneros(romanticas, 5);
 
     });
     const arrayGeneros = [todosLibros, policiacas, aventuras, cienciaFiccion, paranormal, romanticas];
@@ -224,11 +173,54 @@ const librosImg = () => {
 
 //MODAL
 const modal = () => {
- 
+    const modal = document.getElementById("modal");
+
+    //HTML MODAL
+    const retornarlibrosModal = (id) => {
+        let elementosLibros = arrayLibros.find((el) => el.id === id);
+
+        const retornarModal = document.querySelector(".modal-informacion");
+
+        retornarModal.innerHTML = `
+                                    <div class="d-flex flex-row align-items-center cont--img--info" id=${elementosLibros.id}>
+                                        <div class="cont-img-precio text-center">
+                                            <img src=${elementosLibros.imagen} alt="">
+                                            <p class="precio mt-4">Precio: $${elementosLibros.precio}</p>
+                                        </div>
+
+                                        <div class="ms-5 titulo--modal">
+                                            <h2 class="text-center">${elementosLibros.titulo.toUpperCase()}</h2>
+                                            <p><span>Autor:</span>${elementosLibros.autor}</p>
+                                            <p><span>Editorial:</span>${elementosLibros.editorial}</p>
+                                            <p><span>Fecha de publicación:</span>${elementosLibros.fechaPublicacion}</p>
+                                            <p>${elementosLibros.resumen}</p>
+                                            <button type="button" class="botonAgregarCarrito btn btn-light mt-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart4 pb-2" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                                                </svg>
+                                            AGREGAR AL CARRITO
+                                        </button>
+                                        </div>
+                                    </div>`
+
+
+        modal.style.opacity = 1;
+        modal.style.pointerEvents = "unset";
+        carritoModal()
+    }
+
+    const cerrarModal = () => {
+        const cerrarModal = document.querySelector('.cerrarModal');
+        cerrarModal.addEventListener("click", () => {
+            modal.style.opacity = 0;
+            modal.style.pointerEvents = "none";
+        });
+    }
+
+
     const modalImagenes = () => {
         const abrirModal = document.querySelectorAll('.libros');
-        const cerrarModal = document.querySelector('.cerrarModal');
-        const modal = document.getElementById("modal");
 
         abrirModal.forEach(array => {
 
@@ -238,97 +230,32 @@ const modal = () => {
 
                 const id = parseInt(html.id);
 
-                let elementosLibros = arrayLibros.find((el) => el.id === id);
-
-
-                const retornarModal = document.querySelector(".modal--div");
-                retornarModal.innerHTML = `
-            <div class="d-flex flex-row align-items-center cont--img--info">
-                <div class="cont-img-precio text-center">
-                    <img src=${elementosLibros.imagen} alt="">
-                    <p class="precio mt-4">Precio: $${elementosLibros.precio}</p>
-                </div>
-    
-                <div class="ms-5 titulo--modal">
-                    <h2 class="text-center">${elementosLibros.titulo.toUpperCase()}</h2>
-                    <p><span>Autor:</span>${elementosLibros.autor}</p>
-                    <p><span>Editorial:</span>${elementosLibros.editorial}</p>
-                    <p><span>Fecha de publicación:</span>${elementosLibros.fechaPublicacion}</p>
-                    <p>${elementosLibros.resumen}</p>
-                    <button type="button" class="btn btn-light mt-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart4 pb-2" viewBox="0 0 16 16">
-                            <path
-                                d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
-                        </svg>
-                    AGREGAR AL CARRITO
-                </button>
-                </div>
-            </div>`
-
-                modal.style.opacity = 1;
-                modal.style.pointerEvents = "unset";
+                retornarlibrosModal(id);
             })
         });
 
-        cerrarModal.addEventListener("click", () => {
-            modal.style.opacity = 0;
-            modal.style.pointerEvents = "none";
-        })
+        cerrarModal();
 
     }
-
-
-
 
     //MODAL
     const modalBuscador = () => {
         const abrirModal = document.querySelectorAll('.li');
-        const cerrarModal = document.querySelector('.cerrarModal');
-        const modal = document.getElementById("modal");
 
         abrirModal.forEach(array => {
             array.addEventListener("click", (event) => {
                 const tituloLibros = event.target;
                 const id = parseInt(tituloLibros.id);
 
-                let elementosLibros = arrayLibros.find((el) => el.id === id);
-
-                const retornarModal = document.querySelector(".modal--div");
-                retornarModal.innerHTML = `
-            <div class="d-flex flex-row align-items-center cont--img--info">
-                <div class="cont-img-precio text-center">
-                    <img src=${elementosLibros.imagen} alt="">
-                    <p class="precio mt-4">Precio: $${elementosLibros.precio}</p>
-                </div>
-    
-                <div class="ms-5 titulo--modal">
-                    <h2 class="text-center">${elementosLibros.titulo.toUpperCase()}</h2>
-                    <p><span>Autor:</span>${elementosLibros.autor}</p>
-                    <p><span>Editorial:</span>${elementosLibros.editorial}</p>
-                    <p><span>Fecha de publicación:</span>${elementosLibros.fechaPublicacion}</p>
-                    <p>${elementosLibros.resumen}</p>
-                    <button type="button" class="btn btn-light mt-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart4 pb-2" viewBox="0 0 16 16">
-                            <path
-                                d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
-                        </svg>
-                    AGREGAR AL CARRITO
-                </button>
-                </div>
-            </div>`
-
-
-                modal.style.opacity = 1;
-                modal.style.pointerEvents = "unset";
+                retornarlibrosModal(id)
             })
         });
 
-        cerrarModal.addEventListener("click", () => {
-            modal.style.opacity = 0;
-            modal.style.pointerEvents = "none";
-        })
+        cerrarModal();
 
     }
+
+    
     modalImagenes()
     modalBuscador()
 }
@@ -337,4 +264,8 @@ const modal = () => {
 buscador();
 librosImg();
 modal();
-contador()
+
+
+
+
+

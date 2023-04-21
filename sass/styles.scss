@@ -69,6 +69,7 @@ body {
             }
 
             .carrito {
+                cursor: pointer;
                 color: white;
                 transition: .5s;
 
@@ -76,7 +77,8 @@ body {
                     color: $colorPrincipal;
                 }
             }
-            .contador{
+
+            .contador {
                 font-weight: 900;
                 font-size: 20px;
                 color: #039be5;
@@ -268,21 +270,9 @@ body {
             pointer-events: none;
             transition: opacity .6s;
 
-            .cerrarModal {
-                z-index: 100;
-                width: 5%;
-                height: 40px;
-                cursor: pointer;
-                position: absolute;
-                top: 13%;
-                left: 72%;
-                color: #fff;
-            }
-
-
             .modal--div {
                 position: relative;
-                top: 30px;
+                border: 1px solid #fff;
                 width: 90%;
                 max-width: 700px;
                 max-height: 87%;
@@ -295,6 +285,16 @@ body {
                 place-items: center;
                 grid-auto-columns: $cienPorciento;
 
+                .cerrarModal {
+                    z-index: 100;
+                    width: 5%;
+                    height: 40px;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    color: #fff;
+                }
 
                 .cont-img-precio {
                     img {
@@ -379,6 +379,140 @@ body {
                 }
             }
         }
+
+        .contenedor-modal-carrito {
+            background-color: #0a0a0abd;
+            z-index: 400;
+            opacity: 0;
+            position: fixed;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            pointer-events: none;
+            transition: opacity .6s;
+
+            .modal-div-carrito {
+                border: 1px solid #fff;
+                position: relative;
+                width: 90%;
+                max-width: 1000px;
+                max-height: 87%;
+                background-color: #000;
+                margin: auto;
+                border-radius: 6px;
+                padding: 3em 2.5em;
+                display: grid;
+                gap: 1em;
+                place-items: center;
+                grid-auto-columns: 100%;
+
+                .cerrarModal-carrito {
+                    cursor: pointer;
+                    color: #fff;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+                .titulo-carrito {
+                    color: #039be5;
+                    font-size: 40px;
+                    font-weight: 900;
+                    letter-spacing: 3px;
+                    border-bottom: #039be5 2px solid;
+                    position: relative;
+                    bottom: 30px;
+                }
+
+                .modal-info-carrito {
+                    height: 300px;
+                    overflow: auto;
+                    scrollbar-width: thin;
+                    scrollbar-color: #ccc #fff;
+
+                    &::-webkit-scrollbar {
+                        width: 8px;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background-color: #039be5;
+                        border-radius: 4px;
+                    }
+
+                    .div-info-carrito {
+                        margin-left: 30px;
+
+                        .imagen-modal {
+                            width: 80px;
+                            height: 100px;
+                        }
+
+                        p {
+                            font-weight: 900;
+                            color: #fff;
+                            font-size: 30px;
+                        }
+
+                        img {
+                            cursor: pointer;
+                            width: 40px;
+                            height: 40px;
+                            position: relative;
+                            bottom: 10px;
+                        }
+                    }
+                }
+
+                .botones {
+                    .boton-elimiarTodo {
+                        color: #ff0000;
+                        border-color: #ff0000;
+                        position: relative;
+                        right: 80px;
+                        top: 50px;
+                        padding: 10px 25px;
+                        font-size: 16px;
+                        letter-spacing: 2px;
+                        font-weight: 900;
+
+                        &:hover{
+                            color: #fff;
+                            background-color: #ff0000;
+                        }
+                    }
+
+                    .total {
+                        font-weight: 900;
+                        position: relative;
+                        top: 55px;
+                        left: 70px;
+                        color: #fff;
+                        font-size: 25px;
+                    }
+
+                    .boton-comprar {
+                        position: relative;
+                        left: 110px;
+                        top: 40px;
+                        padding: 10px 30px;
+                        font-size: 16px;
+                        letter-spacing: 2px;
+                        font-weight: 900;
+                        background-color: #039be5;
+                        border: #039be5 3px solid;
+                        color: #fff;
+                        border-radius: 50px;
+
+                        &:hover{
+                            background-color: #fff;
+                            color: #039be5;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -400,6 +534,7 @@ body {
 
         a {
             text-decoration: none;
+
             .volver {
                 text-decoration: none;
                 position: relative;
