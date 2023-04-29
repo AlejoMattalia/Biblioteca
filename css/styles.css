@@ -8,6 +8,10 @@
 body {
   background-color: rgb(20, 20, 20);
 }
+body .cargando {
+  position: relative;
+  left: 200px;
+}
 body header {
   z-index: 100;
   width: 100%;
@@ -88,8 +92,10 @@ body main .buscador h1 {
   letter-spacing: 3px;
   font-weight: 900;
   padding-top: 120px;
-  border-bottom: #039be5 2px solid;
   color: #039be5;
+}
+body main .buscador h1 span {
+  border-bottom: #039be5 2px solid;
 }
 body main .buscador h2 {
   z-index: 8;
@@ -164,17 +170,20 @@ body main .contenedor--libro .contenedor-libros-generos {
 body main .contenedor--libro .contenedor-libros-generos .generos--libros {
   width: 300px;
 }
+body main .contenedor--libro .contenedor-libros-generos .generos--libros h3 {
+  color: #039be5;
+  font-size: 50px;
+  letter-spacing: 5px;
+  font-weight: 900;
+  position: relative;
+  right: 20px;
+  top: 70px;
+}
 body main .contenedor--libro .contenedor-libros-generos .generos--libros ul {
   position: relative;
   right: 50px;
   top: 100px;
   list-style-type: none;
-}
-body main .contenedor--libro .contenedor-libros-generos .generos--libros ul h3 {
-  color: #039be5;
-  font-size: 50px;
-  letter-spacing: 5px;
-  font-weight: 900;
 }
 body main .contenedor--libro .contenedor-libros-generos .generos--libros ul .flechas {
   color: #039be5;
@@ -397,7 +406,7 @@ body main .contenedor-modal-carrito .modal-div-carrito .botones .boton-elimiarTo
   border-color: #ff0000;
   position: relative;
   right: 80px;
-  top: 50px;
+  top: 30px;
   padding: 10px 25px;
   font-size: 16px;
   letter-spacing: 2px;
@@ -410,7 +419,7 @@ body main .contenedor-modal-carrito .modal-div-carrito .botones .boton-elimiarTo
 body main .contenedor-modal-carrito .modal-div-carrito .botones .total {
   font-weight: 900;
   position: relative;
-  top: 55px;
+  top: 35px;
   left: 70px;
   color: #fff;
   font-size: 25px;
@@ -418,7 +427,7 @@ body main .contenedor-modal-carrito .modal-div-carrito .botones .total {
 body main .contenedor-modal-carrito .modal-div-carrito .botones .boton-comprar {
   position: relative;
   left: 110px;
-  top: 40px;
+  top: 20px;
   padding: 10px 30px;
   font-size: 16px;
   letter-spacing: 2px;
@@ -432,7 +441,45 @@ body main .contenedor-modal-carrito .modal-div-carrito .botones .boton-comprar:h
   background-color: #fff;
   color: #039be5;
 }
+body .footer {
+  position: relative;
+  top: 50px;
+}
 
+@media (min-width: 300px) and (max-width: 830px) {
+  body main .buscador .contenedor-buscador {
+    width: 80%;
+  }
+  body main .buscador ul {
+    width: 80%;
+  }
+  body main .contenedor--libro h2 {
+    font-size: 65px;
+  }
+  body main .contenedor--libro .contenedor-libros-generos {
+    flex-direction: column;
+  }
+  body main .contenedor--libro .contenedor-libros-generos .generos--libros {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body main .contenedor--libro .contenedor-libros-generos .generos--libros h3 {
+    font-size: 35px;
+  }
+  body main .contenedor--libro .contenedor-libros-generos .generos--libros ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+  body main .contenedor--libro .contenedor-libros-generos .generos--libros ul .div-genero {
+    margin: 15px;
+  }
+}
 .inicioSesion {
   background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url("../img/biblioteca2.webp");
   background-size: cover;

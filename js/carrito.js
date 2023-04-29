@@ -5,13 +5,13 @@ const total = document.querySelector(".total");
 let totalCaluclado;
 
 
-const carritoModal = () => {
+const contador = () => {
+    let numero = carrito.length;
+    const contador = document.querySelector("#contador");
+    contador.innerHTML = numero;
+}
 
-    const contador = () => {
-        let numero = carrito.length;
-        const contador = document.querySelector("#contador");
-        contador.innerHTML = numero;
-    }
+const carritoModal = () => {
 
     const agregarLibroCarrito = () => {
         const pulsarBoton = document.querySelectorAll(".botonAgregarCarrito");
@@ -208,6 +208,7 @@ const comprar = () => {
                 cancelButtonText: 'Cancelar'
             }).then((result) => {
                 if (result.isConfirmed) {
+  
                     Swal.fire({
                         title: '¡Confirmaste la compra!',
                         icon: 'success'
@@ -216,6 +217,7 @@ const comprar = () => {
                     carrito.splice(0, carrito.length);
                     contenedorInfoCarrito.innerHTML = "";
                     borrarTodosDatos();
+                    contador();
                 }
                 else {
                     Swal.fire({
@@ -224,10 +226,8 @@ const comprar = () => {
                     });
                 }
             });
-
         }
     })
-
 }
 
 AbrirCerrarCarrito()

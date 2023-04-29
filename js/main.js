@@ -1,3 +1,13 @@
+
+fetch("js/libros.json")
+    .then((Response) => Response.json())
+    .then((data) => arrayLibros.push(...data))
+    .then(()=> buscador())
+    .then(()=> librosImg())
+    .then(()=> modal())
+.catch(error => console.error(error));
+
+
 //BUSCADOR
 const buscador = () => {
     let contenedor_buscador = document.getElementById("contenedor_buscador");
@@ -91,10 +101,12 @@ const librosImg = () => {
         array.forEach((libros) => {
             contenedorLibro.innerHTML += retornarCardsHtml(libros)
         });
+        modal()
     }
 
-    cargarLibros(arrayLibros);
-
+    contenedorLibro.innerHTML = `<img src="img/cargando.gif" alt="cargando" class="cargando">`;
+    setTimeout(()=> cargarLibros(arrayLibros), 5000);
+    
 
     //GENEROS
     const estilosGeneros = (genero, indice)=>{
@@ -207,7 +219,7 @@ const modal = () => {
 
         modal.style.opacity = 1;
         modal.style.pointerEvents = "unset";
-        carritoModal()
+        carritoModal();
     }
 
     const cerrarModal = () => {
@@ -259,13 +271,3 @@ const modal = () => {
     modalImagenes()
     modalBuscador()
 }
-
-
-buscador();
-librosImg();
-modal();
-
-
-
-
-
