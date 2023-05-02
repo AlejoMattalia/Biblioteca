@@ -323,5 +323,115 @@
     "resumen": "Así cuenta su caso Galip, un joven abogado que vive en Estambul y quiere reencontrarse con Rüya, su esposa. Sospecha que ha huido con otro hombre, con un hombre que bien podría ser alguien muy cercano, casi tan cercano como su propio hermanastro. Galip recorre día y noche las calles de un Estambul real y descubre una historia secreta.", 
     "precio": 5300, 
     "categoria": "ciencia ficcion" 
+    },
+
+    { "id": 31, 
+    "imagen": "https://images.cdn2.buscalibre.com/fit-in/360x360/3e/4c/3e4c6191a61a6c81b17b266a88824863.jpg", 
+    "titulo": "Panteón", 
+    "autor": "Carlos Sisí", 
+    "editorial": "Minotauro", 
+    "fechaPublicacion": 2013, 
+    "resumen": "La Tierra, explotó hace diez mil años. El hombre ya había iniciado su periplo por el espacio. En esta nueva Era, la guerra y la paz son elementos de una misma balanza que se equilibran desde La Colonia. Desde allí, la controladora Maralda Tardes detecta actividad bélica en un planeta alejado, y decide iniciar un protocolo estándar de inspección.", 
+    "precio": 3.650, 
+    "categoria": "ciencia ficcion" 
+    },
+
+    { "id": 32, 
+    "imagen": "https://www.mrwonderbook.com/wp-content/uploads/2022/04/Proyecto-Hail-Mary.jpg", 
+    "titulo": "Proyecto Hail Mary", 
+    "autor": "Andy Wei", 
+    "editorial": "NOVA", 
+    "fechaPublicacion": 2021, 
+    "resumen": "La deslumbrante historia de un astronauta solitario que tiene la misión de salvar a la Tierra de la amenaza de una bacteria alienígena. Ryland Grace es el único superviviente en una misión desesperada. Si falla, la humanidad y la Tierra perecerán.", 
+    "precio": 7699, 
+    "categoria": "ciencia ficcion" 
+    },
+
+    { "id": 33, 
+    "imagen": "https://quelibroleo.com/images/libros/libro_1301243107.png", 
+    "titulo": "El ángel caído", 
+    "autor": "Nalini Singh", 
+    "editorial": "Valdemar", 
+    "fechaPublicacion": 2009, 
+    "resumen": "Luzbel y un ejercito de ángeles se rebelaron contra de El Padre e iniciaron la más terrible de las guerras. El ejercito del Príncipe de Fuego estuvo a punto de alcanzar la victoria, pero en un último enfrentamiento heroico, fue vencido y confinado a una incandescente prisión de odio. Desde ese lugar planea su venganza.", 
+    "precio": 6939, 
+    "categoria": "paranormales" 
+    },
+
+    { "id": 34, 
+    "imagen": "https://m.media-amazon.com/images/I/5131BMrvyrL.jpg", 
+    "titulo": "Insomnio", 
+    "autor": "Maite Aleu", 
+    "editorial": "Independently published", 
+    "fechaPublicacion": 2020, 
+    "resumen": "Roxanna Stone tiene un trabajo que le gusta, una peculiaridad que la hace distinta y un pasado que prefiere olvidar. Una noche, tras un extraño episodio de amnesia, sueña con un enigmático desconocido. A partir de ahí se sumergirá en un mundo de pasión sin límites, donde se mezclan los sueños y la realidad.", 
+    "precio": 3800, 
+    "categoria": "paranormales" 
+    },
+
+    { "id": 35, 
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQzex3FKxJKc9wSz4WsAKEzqd353BssTEEEAYkTe2NzHJ1worI0lUar4EYH5FrsPTn7KA&usqp=CAU", 
+    "titulo": "El deseo oscuro", 
+    "autor": "Christine Feehan", 
+    "editorial": "EDICIONES URANO", 
+    "fechaPublicacion": 1999, 
+    "resumen": "Shea tiene que dejar su trabajo en EEUU y huir a través de toda Europa, perseguida por unos fanáticos que asocian los síntomas de su enfermedad con el vampirismo. Se siente atraída hasta los Cárpatos, en Rumanía, donde encuentra a un hombre en una vieja cripta.", 
+    "precio": 11772, 
+    "categoria": "paranormales" 
+    },
+
+    { "id": 36, 
+    "imagen": "https://www.eltemplodelasmilpuertas.com/biblioteca/portadas/eclipse.jpg", 
+    "titulo": "Eclipse", 
+    "autor": "Stephenie Meyer", 
+    "editorial": "RESERVOIR BOOKS", 
+    "fechaPublicacion": 2007, 
+    "resumen": "Bella Swan vuelve a encontrarse rodeada de peligros, mientras Seattle se ve asolada por una oleada de misteriosos asesinatos y una maliciosa vampira prosigue su búsqueda de venganza. En medio de todo eso, Bella se ve obligada a elegir entre su amor por Edward Cullen y su amistad con Jacob Black", 
+    "precio": 5100, 
+    "categoria": "paranormales" 
+    },
+
+    { "id": 37, 
+    "imagen": "https://images.cdn2.buscalibre.com/fit-in/360x360/c9/75/c975b675606573f2d27cbe8185644262.jpg", 
+    "titulo": "Forastera", 
+    "autor": "Diana Gabaldon", 
+    "editorial": "SALAMANDRA", 
+    "fechaPublicacion": 1991, 
+    "resumen": "Una pareja se encuentran con que el mundo moderno ha desaparecido, ahora los rodea la Escocia de 1734, con sus clanes beligerantes, hombres y mujeres rudos, violentos, pero con una capacidad de amar que Claire nunca habia visto. Claire tendrá que elegir entre la seguridad del futuro y la incertidumbre del pasado.", 
+    "precio": 7699, 
+    "categoria": "romanticas" 
+    },
+
+    { "id": 38, 
+    "imagen": "https://images.cdn2.buscalibre.com/fit-in/360x360/f0/0f/f00f33aec4395aad070045e9cbd5d8f6.jpg", 
+    "titulo": "El Lenguaje del Alma", 
+    "autor": "Josep Soler", 
+    "editorial": "Gaia Ediciones", 
+    "fechaPublicacion": 2015, 
+    "resumen": "Josep Soler explica cómo el cuerpo tiene un lenguaje propio que nos da información constantemente a través de los diferentes cuerpos (físico, energético, emocional, mental y espiritual) que tenemos. Explican las herramientas para alinearse con el propósito de vida.", 
+    "precio": 8000, 
+    "categoria": "romanticas" 
+    },
+
+    { "id": 39, 
+    "imagen": "https://images.cdn3.buscalibre.com/fit-in/360x360/e5/17/e517246b186a26ad496c608e918d608f.jpg", 
+    "titulo": "Llámame por tu nombre", 
+    "autor": "André Aciman", 
+    "editorial": "Farrar", 
+    "fechaPublicacion": 2007, 
+    "resumen": "Un joven estudiante viaja a Italia para profundizar en sus estudios de Filosofía durante un verano. El hermoso pueblo costero en el que se instala servirá para narrar una historia de amor que marcará su vida y la del hijo adolescente de la familia que le acoge.", 
+    "precio": 6799, 
+    "categoria": "romanticas" 
+    },
+
+    { "id": 40, 
+    "imagen": "https://images.cdn2.buscalibre.com/fit-in/360x360/c4/82/c4821d521f27c5f92eb2443674790ef5.jpg", 
+    "titulo": "En nombre del amor", 
+    "autor": "Nicholas Sparks", 
+    "editorial": "Roca editorial", 
+    "fechaPublicacion": 2007, 
+    "resumen": "Travis Parker Un buen trabajo como veterinario, amigos fieles y una casa delante de un lago. Pero hay algo que se resiste a probar: enamorarse. Sin embargo, semejante propósito desaparece por completo en el momento en que aparece en su vida Gabby Holland.", 
+    "precio": 12710, 
+    "categoria": "romanticas" 
     }
 ]

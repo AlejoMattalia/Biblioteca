@@ -57,7 +57,6 @@ header()
 
 //BUSCADOR
 const buscador = () => {
-    let contenedor_buscador = document.getElementById("contenedor_buscador");
     let buscador = document.getElementById("buscador");
     let contenedor_resultados = document.getElementById("contenedor_resultados");
     let ocultar_buscador = document.getElementById("ocultar_buscador");
