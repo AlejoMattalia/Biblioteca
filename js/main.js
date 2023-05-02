@@ -8,6 +8,34 @@ fetch("js/libros.json")
     .catch(error => console.error(error));
 
 
+window.sr = ScrollReveal();
+    sr.reveal('.titulo--img', {
+        duration: 4000,
+        origin: 'left',
+        distance: '1000px'
+    });
+
+    sr.reveal('#header', {
+        duration: 3000,
+        origin: 'top',
+        distance: '100px'
+    });
+
+    sr.reveal('.buscador', {
+        duration: 3000,
+        origin: 'rigth',
+        distance: '100px'
+    });
+
+    sr.reveal('.tiutlo-secundario', {
+        duration: 3000,
+        origin: 'left',
+        distance: '1000px'
+    });
+
+
+
+    
 //HEADER
 const header = () => {
     const header = document.querySelector("#header");
@@ -109,7 +137,7 @@ const librosImg = () => {
     const contenedorLibro = document.querySelector("div.containerLibros");
 
     const retornarCardsHtml = (libro) => {
-        return `<div class="libros" id=${libro.id}>
+        return `<div class="libros wow animate__animated animate__slideInRight" id=${libro.id}>
                 <img src=${libro.imagen} alt="">
                 <h3>${libro.titulo}</h3>
             </div>`
@@ -123,8 +151,13 @@ const librosImg = () => {
         modal()
     }
 
-    contenedorLibro.innerHTML = `<img src="img/cargando.gif" alt="cargando" class="cargando">`;
-    setTimeout(() => cargarLibros(arrayLibros), 5000);
+    // contenedorLibro.innerHTML = `<img src="img/cargando.gif" alt="cargando" class="cargando">`;
+    // setTimeout(() => cargarLibros(arrayLibros), 3000);
+    cargarLibros(arrayLibros)
+
+   
+
+
 
     //GENEROS
     const estilosGeneros = (genero, indice) => {
