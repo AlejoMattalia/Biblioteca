@@ -2,10 +2,29 @@
 fetch("js/libros.json")
     .then((Response) => Response.json())
     .then((data) => arrayLibros.push(...data))
-    .then(()=> buscador())
-    .then(()=> librosImg())
-    .then(()=> modal())
-.catch(error => console.error(error));
+    .then(() => buscador())
+    .then(() => librosImg())
+    .then(() => modal())
+    .catch(error => console.error(error));
+
+
+//HEADER
+const header = () => {
+    const header = document.querySelector("#header");
+    let scrollPosicion = window.scrollY;
+
+    window.onscroll = () => {
+        let newcrollPosicion = window.scrollY;
+
+        if (newcrollPosicion > scrollPosicion) {
+            header.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+        }
+        else {
+            header.style.backgroundColor = "transparent";
+        }
+    }
+}
+header()
 
 
 //BUSCADOR
@@ -105,11 +124,10 @@ const librosImg = () => {
     }
 
     contenedorLibro.innerHTML = `<img src="img/cargando.gif" alt="cargando" class="cargando">`;
-    setTimeout(()=> cargarLibros(arrayLibros), 5000);
-    
+    setTimeout(() => cargarLibros(arrayLibros), 5000);
 
     //GENEROS
-    const estilosGeneros = (genero, indice)=>{
+    const estilosGeneros = (genero, indice) => {
         genero.style.transition = ".5s";
         genero.style.color = "#fff";
         genero.style.borderBottom = "#fff 3px solid";
@@ -267,7 +285,7 @@ const modal = () => {
 
     }
 
-    
+
     modalImagenes()
     modalBuscador()
 }

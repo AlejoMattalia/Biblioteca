@@ -11,8 +11,8 @@ $cienPorciento: 100%;
 
 body {
     background-color: rgb(20, 20, 20);
-    
-    .cargando{
+
+    .cargando {
         position: relative;
         left: 200px;
     }
@@ -20,117 +20,78 @@ body {
     header {
         z-index: 100;
         width: $cienPorciento;
-        background-color: #000;
+        background-color: transparent;
+        // background-color: rgba(0, 0, 0, 0.8);
         position: fixed;
 
-        img {
-            height: 80px;
-            width: 100px;
-        }
+        .boton-iniciar {
+            // position: absolute;
+            // top: 20px;
+            // right: 0;
+            letter-spacing: 1px;
+            font-weight: $fontWeight;
+            border: 2px solid $colorPrincipal;
+            color: $colorPrincipal;
+            outline: none;
 
-        .lista {
-            list-style-type: none;
-
-            a {
-                margin: 15px;
-                font-size: 20px;
-                font-weight: $fontWeight;
-                text-decoration: none;
-                color: #fff;
-                position: relative;
-
-                &:after {
-                    content: '';
-                    position: absolute;
-                    width: $cienPorciento;
-                    height: 2px;
-                    bottom: 0;
-                    left: 0;
-                    background-color: $colorPrincipal;
-                    transform: scaleX(0);
-                    transform-origin: bottom right;
-                    transition: transform 0.4s ease-out;
-                }
-
-                &:hover:after {
-                    transform: scaleX(1);
-                    transform-origin: bottom left;
-                }
+            &:hover {
+                background-color: $colorPrincipal;
+                color: #fdfdfd;
             }
         }
 
         .contenedor--carrito {
-            .boton-iniciar {
-                letter-spacing: 1px;
-                font-weight: $fontWeight;
-                border: 2px solid $colorPrincipal;
-                color: $colorPrincipal;
-                outline: none;
-
-                &:hover {
-                    background-color: $colorPrincipal;
-                    color: #fdfdfd;
-                }
-            }
-
-            .carrito {
+            margin-top: 10px;
+            .carrito{
                 cursor: pointer;
-                color: white;
-                transition: .5s;
-
-                &:hover {
-                    color: $colorPrincipal;
-                }
-            }
+                width: 60px;
+            }   
 
             .contador {
+                pointer-events: none;
                 font-weight: 900;
                 font-size: 20px;
-                color: #039be5;
-                position: absolute;
-                top: 0;
-                right: 0;
-                margin-top: 30px;
-                margin-right: 35px;
+                color: rgb(203, 253, 255, 0.8);
+                position: relative;
+                bottom: 38px;
             }
         }
     }
 
     main {
         .buscador {
-            background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url("../img/biblioteca.jpg");
+            background-image: url("../img/libro.jpg");
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
             background-attachment: fixed;
             height: 656px;
 
-            h1 {
-                z-index: 8;
-                font-size: 80px;
-                letter-spacing: 3px;
-                font-weight: $fontWeight;
-                padding-top: 120px;
-                color: $colorPrincipal;
-
-                span{
-                    border-bottom: $colorPrincipal 2px solid;
-                }
+            img{
+                position: absolute;
+                top: 50px;
+                left: 0;
             }
 
             h2 {
+                position: relative;
+                top: 8%;
+                left: 20%;
                 z-index: 8;
                 padding-top: 100px;
                 color: #fff;
             }
 
             .contenedor-buscador {
+                position: relative;
+                top: 7%;
+                left: 20%;
                 z-index: 10;
                 padding-top: 20px;
                 width: 50%;
 
                 input {
-                    border: 3px solid $colorPrincipal;
+                    border: 3px solid #ffffff;
                     color: #000;
                     height: 60px;
                     border-radius: 20px;
@@ -139,12 +100,15 @@ body {
 
                     &:focus {
                         outline: none;
-                        border: 6px solid $colorPrincipal;
+                        border: 3px solid #727272;
                     }
                 }
             }
 
             ul {
+                position: relative;
+                top: 7%;
+                left: 20%;
                 z-index: 10;
                 width: 50%;
                 background-color: #fff;
@@ -170,13 +134,20 @@ body {
                 }
             }
 
+            .flecha{
+                width: 80px;
+                position: absolute;
+                top: 80%;
+                left: 18%;
+                transition: all 1s;
+            }
+
             .ocultar_buscador {
                 width: $cienPorciento;
                 height: 656px;
                 position: absolute;
                 top: 0;
                 left: 0;
-                background-color: rgba(0, 0, 0, 0.5);
             }
         }
 
@@ -184,13 +155,8 @@ body {
             width: $cienPorciento;
             padding-left: 50px;
 
-            h2 {
-                margin-top: 80px;
-                font-size: 80px;
-                letter-spacing: 2px;
-                color: $colorPrincipal;
-                font-weight: $fontWeight;
-                border-bottom: $colorPrincipal 2px solid;
+            .tiutlo-secundario{
+                margin-top: 100px;
             }
 
             .contenedor-libros-generos {
@@ -201,15 +167,12 @@ body {
                 .generos--libros {
                     width: 300px;
 
-                    
-                    h3 {
-                        color: $colorPrincipal;
-                        font-size: 50px;
-                        letter-spacing: 5px;
-                        font-weight: $fontWeight;
+
+                    img{
                         position: relative;
-                        right: 20px;
-                        top: 70px;
+                        top: 60px;
+                        right: 25px;
+                        width: 280px;
                     }
 
                     ul {
@@ -527,7 +490,7 @@ body {
         }
     }
 
-    .footer{
+    .footer {
         position: relative;
         top: 50px;
     }
@@ -542,13 +505,13 @@ body {
                     width: 80%;
                 }
 
-                ul{
+                ul {
                     width: 80%;
                 }
             }
 
             .contenedor--libro {
-                h2{
+                h2 {
                     font-size: 65px;
                 }
 
@@ -561,10 +524,10 @@ body {
                         flex-direction: column;
                         align-items: center;
 
-                        h3{
+                        h3 {
                             font-size: 35px;
                         }
-                        
+
                         ul {
                             width: 100%;
                             display: flex;
@@ -573,7 +536,7 @@ body {
                             justify-content: center;
                             margin-bottom: 80px;
 
-                            .div-genero{
+                            .div-genero {
                                 margin: 15px;
                             }
                         }

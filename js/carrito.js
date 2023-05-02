@@ -9,6 +9,13 @@ const contador = () => {
     let numero = carrito.length;
     const contador = document.querySelector("#contador");
     contador.innerHTML = numero;
+
+    if(numero >= 10){
+        contador.style.left = "18px"
+    }
+    else{
+        contador.style.left = "24px"
+    }
 }
 
 const carritoModal = () => {

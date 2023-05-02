@@ -15,100 +15,66 @@ body .cargando {
 body header {
   z-index: 100;
   width: 100%;
-  background-color: #000;
+  background-color: transparent;
   position: fixed;
 }
-body header img {
-  height: 80px;
-  width: 100px;
-}
-body header .lista {
-  list-style-type: none;
-}
-body header .lista a {
-  margin: 15px;
-  font-size: 20px;
-  font-weight: 900;
-  text-decoration: none;
-  color: #fff;
-  position: relative;
-}
-body header .lista a:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #039be5;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.4s ease-out;
-}
-body header .lista a:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-body header .contenedor--carrito .boton-iniciar {
+body header .boton-iniciar {
   letter-spacing: 1px;
   font-weight: 900;
   border: 2px solid #039be5;
   color: #039be5;
   outline: none;
 }
-body header .contenedor--carrito .boton-iniciar:hover {
+body header .boton-iniciar:hover {
   background-color: #039be5;
   color: #fdfdfd;
 }
+body header .contenedor--carrito {
+  margin-top: 10px;
+}
 body header .contenedor--carrito .carrito {
   cursor: pointer;
-  color: white;
-  transition: 0.5s;
-}
-body header .contenedor--carrito .carrito:hover {
-  color: #039be5;
+  width: 60px;
 }
 body header .contenedor--carrito .contador {
+  pointer-events: none;
   font-weight: 900;
   font-size: 20px;
-  color: #039be5;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 30px;
-  margin-right: 35px;
+  color: rgba(203, 253, 255, 0.8);
+  position: relative;
+  bottom: 38px;
 }
 body main .buscador {
-  background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url("../img/biblioteca.jpg");
+  background-image: url("../img/libro.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
   height: 656px;
 }
-body main .buscador h1 {
-  z-index: 8;
-  font-size: 80px;
-  letter-spacing: 3px;
-  font-weight: 900;
-  padding-top: 120px;
-  color: #039be5;
-}
-body main .buscador h1 span {
-  border-bottom: #039be5 2px solid;
+body main .buscador img {
+  position: absolute;
+  top: 50px;
+  left: 0;
 }
 body main .buscador h2 {
+  position: relative;
+  top: 8%;
+  left: 20%;
   z-index: 8;
   padding-top: 100px;
   color: #fff;
 }
 body main .buscador .contenedor-buscador {
+  position: relative;
+  top: 7%;
+  left: 20%;
   z-index: 10;
   padding-top: 20px;
   width: 50%;
 }
 body main .buscador .contenedor-buscador input {
-  border: 3px solid #039be5;
+  border: 3px solid #ffffff;
   color: #000;
   height: 60px;
   border-radius: 20px;
@@ -117,9 +83,12 @@ body main .buscador .contenedor-buscador input {
 }
 body main .buscador .contenedor-buscador input:focus {
   outline: none;
-  border: 6px solid #039be5;
+  border: 3px solid #727272;
 }
 body main .buscador ul {
+  position: relative;
+  top: 7%;
+  left: 20%;
   z-index: 10;
   width: 50%;
   background-color: #fff;
@@ -142,25 +111,26 @@ body main .buscador ul li {
 body main .buscador ul li:hover {
   background-color: #dbdbdb;
 }
+body main .buscador .flecha {
+  width: 80px;
+  position: absolute;
+  top: 80%;
+  left: 18%;
+  transition: all 1s;
+}
 body main .buscador .ocultar_buscador {
   width: 100%;
   height: 656px;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 body main .contenedor--libro {
   width: 100%;
   padding-left: 50px;
 }
-body main .contenedor--libro h2 {
-  margin-top: 80px;
-  font-size: 80px;
-  letter-spacing: 2px;
-  color: #039be5;
-  font-weight: 900;
-  border-bottom: #039be5 2px solid;
+body main .contenedor--libro .tiutlo-secundario {
+  margin-top: 100px;
 }
 body main .contenedor--libro .contenedor-libros-generos {
   display: flex;
@@ -170,14 +140,11 @@ body main .contenedor--libro .contenedor-libros-generos {
 body main .contenedor--libro .contenedor-libros-generos .generos--libros {
   width: 300px;
 }
-body main .contenedor--libro .contenedor-libros-generos .generos--libros h3 {
-  color: #039be5;
-  font-size: 50px;
-  letter-spacing: 5px;
-  font-weight: 900;
+body main .contenedor--libro .contenedor-libros-generos .generos--libros img {
   position: relative;
-  right: 20px;
-  top: 70px;
+  top: 60px;
+  right: 25px;
+  width: 280px;
 }
 body main .contenedor--libro .contenedor-libros-generos .generos--libros ul {
   position: relative;
