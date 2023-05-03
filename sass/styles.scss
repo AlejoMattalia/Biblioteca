@@ -60,8 +60,6 @@ body {
     }
 
     main {
-        width: 101%;
-
         .buscador {
             background-image: url("../img/libro.jpg");
             background-repeat: no-repeat;
@@ -583,7 +581,7 @@ body {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        margin-left: 25px;
+                        padding-left: 50px;
 
                         h3 {
                             font-size: 35px;
@@ -660,7 +658,7 @@ body {
 @media (min-width: 300px) and (max-width: 575px) {
     body {
         main {
-            width: 150%;
+            width: 105%;
 
             .buscador {
 
@@ -706,12 +704,12 @@ body {
 @media (min-width: 300px) and (max-width: 400px) {
     body {
         main {
-            width: 170%;
+            width: 105%;
 
             .contenedor--libro {
 
                 .tiutlo-secundario {
-                    width: 380px;
+                    width: 300px;
                 }
             }
         }

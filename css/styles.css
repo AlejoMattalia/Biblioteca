@@ -44,9 +44,6 @@ body header .contenedor--carrito .contador {
   position: relative;
   bottom: 38px;
 }
-body main {
-  width: 101%;
-}
 body main .buscador {
   background-image: url("../img/libro.jpg");
   background-repeat: no-repeat;
@@ -470,7 +467,7 @@ body .footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 25px;
+    padding-left: 50px;
   }
   body main .contenedor--libro .contenedor-libros-generos .generos--libros h3 {
     font-size: 35px;
@@ -519,7 +516,7 @@ body .footer {
 }
 @media (min-width: 300px) and (max-width: 575px) {
   body main {
-    width: 150%;
+    width: 105%;
   }
   body main .buscador img {
     width: 280px;
@@ -550,10 +547,10 @@ body .footer {
 }
 @media (min-width: 300px) and (max-width: 400px) {
   body main {
-    width: 170%;
+    width: 105%;
   }
   body main .contenedor--libro .tiutlo-secundario {
-    width: 380px;
+    width: 300px;
   }
 }
 .inicioSesion {
