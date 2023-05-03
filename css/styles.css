@@ -44,6 +44,9 @@ body header .contenedor--carrito .contador {
   position: relative;
   bottom: 38px;
 }
+body main {
+  width: 101%;
+}
 body main .buscador {
   background-image: url("../img/libro.jpg");
   background-repeat: no-repeat;
@@ -56,6 +59,7 @@ body main .buscador img {
   position: absolute;
   top: 50px;
   left: 0;
+  filter: drop-shadow(15px 15px 8px #000);
 }
 body main .buscador h2 {
   position: relative;
@@ -131,6 +135,7 @@ body main .contenedor--libro {
 }
 body main .contenedor--libro .tiutlo-secundario {
   margin-top: 100px;
+  filter: drop-shadow(8px 8px 4px #000);
 }
 body main .contenedor--libro .contenedor-libros-generos {
   display: flex;
@@ -413,12 +418,46 @@ body .footer {
   top: 50px;
 }
 
+@media (min-width: 300px) and (max-width: 1155px) {
+  body main .buscador img {
+    width: 450px;
+  }
+  body main .buscador .flecha {
+    width: 70px;
+    top: 80%;
+  }
+}
+@media (min-width: 300px) and (max-width: 1000px) {
+  body main .buscador img {
+    width: 375px;
+  }
+  body main .buscador .flecha {
+    width: 70px;
+    top: 70%;
+  }
+}
 @media (min-width: 300px) and (max-width: 830px) {
+  body main .buscador img {
+    width: 350px;
+  }
+  body main .buscador h2 {
+    font-size: 25px;
+  }
   body main .buscador .contenedor-buscador {
-    width: 80%;
+    width: 40%;
+  }
+  body main .buscador .contenedor-buscador input {
+    height: 55px;
   }
   body main .buscador ul {
-    width: 80%;
+    width: 40%;
+  }
+  body main .buscador .flecha {
+    width: 65px;
+    top: 70%;
+  }
+  body main .contenedor--libro {
+    padding-left: 0;
   }
   body main .contenedor--libro h2 {
     font-size: 65px;
@@ -431,6 +470,7 @@ body .footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 25px;
   }
   body main .contenedor--libro .contenedor-libros-generos .generos--libros h3 {
     font-size: 35px;
@@ -445,6 +485,75 @@ body .footer {
   }
   body main .contenedor--libro .contenedor-libros-generos .generos--libros ul .div-genero {
     margin: 15px;
+  }
+  body main .contenedor-modal .modal--div .cont--img--info p {
+    font-size: 14px;
+  }
+  body main .contenedor-modal .modal--div .cont--img--info p span {
+    font-size: 16px;
+  }
+  body main .contenedor-modal .modal--div .cont--img--info button {
+    font-size: 13px;
+  }
+}
+@media (min-width: 300px) and (max-width: 700px) {
+  body main {
+    width: 102%;
+  }
+  body main .buscador img {
+    width: 300px;
+    top: 15%;
+  }
+  body main .buscador h2 {
+    left: 24%;
+  }
+  body main .buscador .contenedor-buscador {
+    left: 24%;
+  }
+  body main .buscador ul {
+    left: 24%;
+  }
+  body main .buscador .flecha {
+    width: 55px;
+  }
+}
+@media (min-width: 300px) and (max-width: 575px) {
+  body main {
+    width: 150%;
+  }
+  body main .buscador img {
+    width: 280px;
+    top: 40%;
+  }
+  body main .buscador h2 {
+    left: 0;
+    top: 2%;
+  }
+  body main .buscador .contenedor-buscador {
+    width: 60%;
+    left: 0;
+    top: 0;
+  }
+  body main .buscador ul {
+    width: 60%;
+    left: 0;
+    top: 0;
+  }
+  body main .buscador .flecha {
+    width: 55px;
+    top: 82%;
+    left: 25%;
+  }
+  body main .contenedor--libro .tiutlo-secundario {
+    width: 400px;
+  }
+}
+@media (min-width: 300px) and (max-width: 400px) {
+  body main {
+    width: 170%;
+  }
+  body main .contenedor--libro .tiutlo-secundario {
+    width: 380px;
   }
 }
 .inicioSesion {
