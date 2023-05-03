@@ -10,7 +10,7 @@ fetch("js/libros.json")
 
 window.sr = ScrollReveal();
     sr.reveal('.titulo--img', {
-        duration: 4000,
+        duration: 3000,
         origin: 'left',
         distance: '1000px'
     });
@@ -19,18 +19,6 @@ window.sr = ScrollReveal();
         duration: 3000,
         origin: 'top',
         distance: '100px'
-    });
-
-    sr.reveal('.buscador', {
-        duration: 3000,
-        origin: 'rigth',
-        distance: '100px'
-    });
-
-    sr.reveal('.tiutlo-secundario', {
-        duration: 3000,
-        origin: 'left',
-        distance: '1000px'
     });
 
 
@@ -150,9 +138,8 @@ const librosImg = () => {
         modal()
     }
 
-    // contenedorLibro.innerHTML = `<img src="img/cargando.gif" alt="cargando" class="cargando">`;
-    // setTimeout(() => cargarLibros(arrayLibros), 3000);
-    cargarLibros(arrayLibros)
+    contenedorLibro.innerHTML = `<img src="img/cargando.gif" alt="cargando" class="cargando">`;
+    setTimeout(() => cargarLibros(arrayLibros), 3000);
 
    
 
