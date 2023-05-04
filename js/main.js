@@ -137,11 +137,7 @@ const librosImg = () => {
         });
         modal()
     }
-
-    contenedorLibro.innerHTML = `<img src="img/cargando.gif" alt="cargando" class="cargando">`;
-    setTimeout(() => cargarLibros(arrayLibros), 3000);
-
-   
+    cargarLibros(arrayLibros)
 
 
 
@@ -239,10 +235,12 @@ const modal = () => {
 
                                         <div class="ms-5 titulo--modal">
                                             <h2 class="text-center">${elementosLibros.titulo.toUpperCase()}</h2>
-                                            <p><span>Autor:</span>${elementosLibros.autor}</p>
-                                            <p><span>Editorial:</span>${elementosLibros.editorial}</p>
-                                            <p><span>Fecha de publicación:</span>${elementosLibros.fechaPublicacion}</p>
-                                            <p>${elementosLibros.resumen}</p>
+                                            <div class="informacionLibroModal">
+                                                <p><span>Autor:</span>${elementosLibros.autor}</p>
+                                                <p><span>Editorial:</span>${elementosLibros.editorial}</p>
+                                                <p><span>Fecha de publicación:</span>${elementosLibros.fechaPublicacion}</p>
+                                                <p>${elementosLibros.resumen}</p>
+                                            </div>
                                             <button type="button" class="botonAgregarCarrito btn btn-light mt-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart4 pb-2" viewBox="0 0 16 16">
                                                     <path

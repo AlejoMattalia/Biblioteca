@@ -483,14 +483,30 @@ body .footer {
   body main .contenedor--libro .contenedor-libros-generos .generos--libros ul .div-genero {
     margin: 15px;
   }
-  body main .contenedor-modal .modal--div .cont--img--info p {
+  body main .contenedor-modal .modal--div .cont--img--info .titulo--modal .informacionLibroModal {
+    overflow: scroll;
+  }
+  body main .contenedor-modal .modal--div .cont--img--info .titulo--modal .informacionLibroModal p {
     font-size: 14px;
+    color: #fff;
+    letter-spacing: 1px;
   }
-  body main .contenedor-modal .modal--div .cont--img--info p span {
+  body main .contenedor-modal .modal--div .cont--img--info .titulo--modal .informacionLibroModal p span {
+    margin-right: 10px;
+    border-bottom: none;
     font-size: 16px;
+    border-bottom: #fff 1px solid;
+    font-weight: 900;
   }
-  body main .contenedor-modal .modal--div .cont--img--info button {
-    font-size: 13px;
+  body main .contenedor-modal .modal--div .cont--img--info .titulo--modal .informacionLibroModal button {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    background-color: #039be5;
+    border: #039be5 2px solid;
+    color: #fff;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
   }
 }
 @media (min-width: 300px) and (max-width: 700px) {

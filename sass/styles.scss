@@ -581,7 +581,7 @@ body {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        padding-left: 50px;
+                        // padding-left: 50px;
 
                         h3 {
                             font-size: 35px;
@@ -606,16 +606,35 @@ body {
             .contenedor-modal {
                 .modal--div {
                     .cont--img--info {
+                        .titulo--modal{
+                           .informacionLibroModal{
+                            overflow: scroll;
+                           
                         p {
                             font-size: 14px;
+                            color: #fff;
+                            letter-spacing: 1px;
+    
                             span {
+                                margin-right: 10px;
+                                border-bottom: none;
                                 font-size: 16px;
+                                border-bottom: #fff 1px solid;
+                                font-weight: $fontWeight;
                             }
                         }
-
+    
                         button {
-                            font-size: 13px;
-                        }
+                            // padding-top: 10px;
+                            font-size: 11px;
+                            letter-spacing: 2px;
+                            font-weight: $fontWeight;
+                            background-color: $colorPrincipal;
+                            border: $colorPrincipal 2px solid;
+                            color: #fff;
+                            border-radius: 50px;
+                            transition: transform .3s ease;
+                        }}}
                     }
                 }
             }
