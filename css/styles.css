@@ -18,6 +18,13 @@ body header {
   background-color: transparent;
   position: fixed;
 }
+body header p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 35px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
 body header .boton-iniciar {
   letter-spacing: 1px;
   font-weight: 900;
@@ -625,6 +632,9 @@ body .footer {
   }
 }
 @media (min-width: 300px) and (max-width: 575px) {
+  body header p {
+    font-size: 25px;
+  }
   body main .buscador img {
     width: 280px;
     top: 40%;
@@ -698,6 +708,12 @@ body .footer {
   }
 }
 @media (min-width: 300px) and (max-width: 403px) {
+  body header p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    margin-right: 20px;
+  }
   body main .contenedor--libro .tiutlo-secundario {
     width: 300px;
   }

@@ -23,6 +23,14 @@ body {
         background-color: transparent;
         position: fixed;
 
+        p{
+            color:rgba($color: #fff, $alpha: 0.5);
+            font-size: 35px;
+            font-weight: $fontWeight;
+            letter-spacing: 2px;
+            border-bottom: 2px solid rgba($color: #fff, $alpha: 0.5);
+        }
+
         .boton-iniciar {
             letter-spacing: 1px;
             font-weight: $fontWeight;
@@ -853,6 +861,12 @@ body {
 
 @media (min-width: 300px) and (max-width: 575px) {
     body {
+        header {    
+            p{
+                font-size: 25px;
+            }
+        }
+
         main {
 
             .buscador {
@@ -974,6 +988,15 @@ body {
 
 @media (min-width: 300px) and (max-width: 403px) {
     body {
+        header {    
+            p{
+                font-size: 20px;
+                letter-spacing: 1px;
+                border-bottom: 1px solid rgba($color: #fff, $alpha: 0.5);
+                margin-right: 20px;
+            }
+        }
+
         main {
             .contenedor--libro {
 
