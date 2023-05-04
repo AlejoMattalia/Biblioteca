@@ -432,6 +432,27 @@ body .footer {
     width: 70px;
     top: 70%;
   }
+  body main .contenedor-modal .modal--div .cont--img--info h2 {
+    font-size: 20px;
+  }
+  body main .contenedor-modal .modal--div .cont--img--info .titulo--modal .informacionLibroModal {
+    height: 280px;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #fff;
+  }
+  body main .contenedor-modal .modal--div .cont--img--info .titulo--modal .informacionLibroModal::-webkit-scrollbar {
+    width: 8px;
+  }
+  body main .contenedor-modal .modal--div .cont--img--info .titulo--modal .informacionLibroModal::-webkit-scrollbar-thumb {
+    background-color: #039be5;
+    border-radius: 4px;
+  }
+  body main .contenedor-modal .modal--div .cont--img--info .titulo--modal button {
+    position: relative;
+    top: 30px;
+    font-size: 13px;
+  }
 }
 @media (min-width: 300px) and (max-width: 830px) {
   body main .buscador img {
@@ -483,36 +504,23 @@ body .footer {
   body main .contenedor--libro .contenedor-libros-generos .generos--libros ul .div-genero {
     margin: 15px;
   }
-  body main .contenedor-modal .modal--div .cont--img--info .titulo--modal .informacionLibroModal {
-    overflow: scroll;
+  body main .contenedor-modal .modal--div .cont-img-precio img {
+    width: 250px;
+    height: 350px;
   }
-  body main .contenedor-modal .modal--div .cont--img--info .titulo--modal .informacionLibroModal p {
-    font-size: 14px;
+  body main .contenedor-modal .modal--div .cont-img-precio .precio {
+    top: 30px;
+  }
+  body main .contenedor-modal .modal--div .cont--img--info .titulo--modal p {
+    font-size: 13px;
     color: #fff;
     letter-spacing: 1px;
   }
-  body main .contenedor-modal .modal--div .cont--img--info .titulo--modal .informacionLibroModal p span {
-    margin-right: 10px;
-    border-bottom: none;
+  body main .contenedor-modal .modal--div .cont--img--info .titulo--modal p span {
     font-size: 16px;
-    border-bottom: #fff 1px solid;
-    font-weight: 900;
-  }
-  body main .contenedor-modal .modal--div .cont--img--info .titulo--modal .informacionLibroModal button {
-    font-size: 11px;
-    letter-spacing: 2px;
-    font-weight: 900;
-    background-color: #039be5;
-    border: #039be5 2px solid;
-    color: #fff;
-    border-radius: 50px;
-    transition: transform 0.3s ease;
   }
 }
 @media (min-width: 300px) and (max-width: 700px) {
-  body main {
-    width: 102%;
-  }
   body main .buscador img {
     width: 300px;
     top: 15%;
@@ -529,11 +537,16 @@ body .footer {
   body main .buscador .flecha {
     width: 55px;
   }
+  body main .contenedor-modal .modal--div .cont-img-precio img {
+    width: 220px;
+    height: 320px;
+  }
+  body main .contenedor-modal .modal--div .cont--img--info .titulo--modal button {
+    letter-spacing: 0;
+    font-size: 12px;
+  }
 }
 @media (min-width: 300px) and (max-width: 575px) {
-  body main {
-    width: 105%;
-  }
   body main .buscador img {
     width: 280px;
     top: 40%;
@@ -560,13 +573,70 @@ body .footer {
   body main .contenedor--libro .tiutlo-secundario {
     width: 400px;
   }
+  body main .contenedor-modal .modal--div .cerrarModal {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  body main .contenedor-modal .modal--div .cont-img-precio img {
+    width: 100px;
+    height: 200px;
+  }
+  body main .contenedor-modal .modal--div .cont-img-precio .precio {
+    font-size: 15px;
+  }
+  body main .contenedor-modal .modal--div .cont--img--info h2 {
+    position: relative;
+    right: 60px;
+  }
+  body main .contenedor-modal .modal--div .cont--img--info .titulo--modal button {
+    position: relative;
+    right: 20px;
+    width: 180px;
+  }
 }
 @media (min-width: 300px) and (max-width: 400px) {
-  body main {
-    width: 105%;
-  }
   body main .contenedor--libro .tiutlo-secundario {
     width: 300px;
+  }
+  body main .contenedor-modal .modal--div .cerrarModal {
+    margin-right: 20px;
+  }
+  body main .contenedor-modal .modal--div .cont-img-precio img {
+    position: relative;
+    bottom: 50px;
+    width: 70px;
+    height: 120px;
+  }
+  body main .contenedor-modal .modal--div .cont-img-precio .precio {
+    position: relative;
+    top: 140px;
+    font-size: 12px;
+  }
+}
+@media (min-width: 300px) and (max-width: 340px) {
+  body main .contenedor-modal .modal--div .cerrarModal {
+    margin-right: 20px;
+  }
+  body main .contenedor-modal .modal--div .cont-img-precio img {
+    display: none;
+  }
+  body main .contenedor-modal .modal--div .cont-img-precio .precio {
+    position: relative;
+    top: 200px;
+    left: 50px;
+    font-size: 12px;
+  }
+  body main .contenedor-modal .modal--div .cont--img--info {
+    position: relative;
+    right: 30px;
+  }
+  body main .contenedor-modal .modal--div .cont--img--info h2 {
+    right: 0px;
+  }
+  body main .contenedor-modal .modal--div .cont--img--info .titulo--modal button {
+    position: relative;
+    left: 20px;
+    width: 180px;
   }
 }
 .inicioSesion {

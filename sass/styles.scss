@@ -530,6 +530,40 @@ body {
                     top: 70%;
                 }
             }
+
+            .contenedor-modal {
+                .modal--div {
+                    .cont--img--info {
+                        h2 {
+                            font-size: 20px;
+                        }
+
+                        .titulo--modal {
+                            .informacionLibroModal {
+                                height: 280px;
+                                overflow: auto;
+                                scrollbar-width: thin;
+                                scrollbar-color: #ccc #fff;
+
+                                &::-webkit-scrollbar {
+                                    width: 8px;
+                                }
+
+                                &::-webkit-scrollbar-thumb {
+                                    background-color: #039be5;
+                                    border-radius: 4px;
+                                }
+                            }
+
+                            button {
+                                position: relative;
+                                top: 30px;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -566,6 +600,7 @@ body {
             }
 
 
+
             .contenedor--libro {
                 padding-left: 0;
 
@@ -581,7 +616,7 @@ body {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        // padding-left: 50px;
+                        padding-left: 50px;
 
                         h3 {
                             font-size: 35px;
@@ -605,36 +640,29 @@ body {
 
             .contenedor-modal {
                 .modal--div {
+                    .cont-img-precio {
+                        img {
+                            width: 250px;
+                            height: 350px;
+                        }
+
+                        .precio {
+                            top: 30px;
+                        }
+                    }
+
                     .cont--img--info {
-                        .titulo--modal{
-                           .informacionLibroModal{
-                            overflow: scroll;
-                           
-                        p {
-                            font-size: 14px;
-                            color: #fff;
-                            letter-spacing: 1px;
-    
-                            span {
-                                margin-right: 10px;
-                                border-bottom: none;
-                                font-size: 16px;
-                                border-bottom: #fff 1px solid;
-                                font-weight: $fontWeight;
+                        .titulo--modal {
+                            p {
+                                font-size: 13px;
+                                color: #fff;
+                                letter-spacing: 1px;
+        
+                                span {
+                                    font-size: 16px;
+                                }
                             }
                         }
-    
-                        button {
-                            // padding-top: 10px;
-                            font-size: 11px;
-                            letter-spacing: 2px;
-                            font-weight: $fontWeight;
-                            background-color: $colorPrincipal;
-                            border: $colorPrincipal 2px solid;
-                            color: #fff;
-                            border-radius: 50px;
-                            transition: transform .3s ease;
-                        }}}
                     }
                 }
             }
@@ -645,7 +673,6 @@ body {
 @media (min-width: 300px) and (max-width: 700px) {
     body {
         main {
-            width: 102%;
 
             .buscador {
 
@@ -670,6 +697,26 @@ body {
                     width: 55px;
                 }
             }
+
+            .contenedor-modal {
+                .modal--div {
+                    .cont-img-precio {
+                        img {
+                            width: 220px;
+                            height: 320px;
+                        }
+                    }
+
+                    .cont--img--info {
+                        .titulo--modal {
+                            button {
+                                letter-spacing: 0;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -677,7 +724,6 @@ body {
 @media (min-width: 300px) and (max-width: 575px) {
     body {
         main {
-            width: 105%;
 
             .buscador {
 
@@ -716,6 +762,39 @@ body {
                     width: 400px;
                 }
             }
+
+            .contenedor-modal {
+                .modal--div {
+                    .cerrarModal {
+                        margin-top: 10px;
+                        margin-right: 10px;
+                    }
+                    .cont-img-precio {
+                        img {
+                            width: 100px;
+                            height: 200px;
+                        }
+
+                        .precio{
+                            font-size: 15px;
+                        }
+                    }
+
+                    .cont--img--info {
+                        h2 {
+                            position: relative;
+                            right: 60px;
+                        }
+                        .titulo--modal {
+                            button {
+                                position: relative;
+                                right: 20px;
+                                width: 180px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -723,12 +802,74 @@ body {
 @media (min-width: 300px) and (max-width: 400px) {
     body {
         main {
-            width: 105%;
-
             .contenedor--libro {
 
                 .tiutlo-secundario {
                     width: 300px;
+                }
+            }
+
+            .contenedor-modal {
+                .modal--div {
+                    .cerrarModal {
+                        margin-right: 20px;
+                    }
+                    .cont-img-precio {
+                        img {
+                            position: relative;
+                            bottom: 50px;
+                            width: 70px;
+                            height: 120px;
+                        }
+
+                        .precio{
+                            position: relative;
+                            top: 140px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 300px) and (max-width: 340px) {
+    body {
+        main {
+            .contenedor-modal {
+                .modal--div {
+                    .cerrarModal {
+                        margin-right: 20px;
+                    }
+                    .cont-img-precio {
+                        img {
+                            display: none;
+                        }
+
+                        .precio{
+                            position: relative;
+                            top: 200px;
+                            left: 50px;
+                            font-size: 12px;
+                        }
+                    }
+                    .cont--img--info {
+                        position: relative;
+                        right: 30px;
+
+                        h2{
+                            right: 0px;
+                        }
+
+                        .titulo--modal {
+                            button {
+                                position: relative;
+                                left: 20px;
+                                width: 180px;
+                            }
+                        }
+                    } 
                 }
             }
         }
