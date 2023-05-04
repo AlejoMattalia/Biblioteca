@@ -423,6 +423,19 @@ body .footer {
     width: 70px;
     top: 80%;
   }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .boton-elimiarTodo {
+    top: 10px;
+    font-size: 14px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .total {
+    top: 15px;
+    font-size: 22px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .boton-comprar {
+    top: 0px;
+    left: 90px;
+    font-size: 14px;
+  }
 }
 @media (min-width: 300px) and (max-width: 1000px) {
   body main .buscador img {
@@ -452,6 +465,21 @@ body .footer {
     position: relative;
     top: 30px;
     font-size: 13px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .modal-info-carrito .div-info-carrito p {
+    font-weight: 900;
+    color: #fff;
+    font-size: 25px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .boton-elimiarTodo {
+    font-size: 14px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .total {
+    font-size: 22px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .boton-comprar {
+    left: 90px;
+    font-size: 14px;
   }
 }
 @media (min-width: 300px) and (max-width: 830px) {
@@ -519,6 +547,25 @@ body .footer {
   body main .contenedor-modal .modal--div .cont--img--info .titulo--modal p span {
     font-size: 16px;
   }
+  body main .contenedor-modal-carrito .modal-div-carrito .modal-info-carrito .div-info-carrito .imagen-modal {
+    position: relative;
+    right: 20px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .modal-info-carrito .div-info-carrito .precio {
+    position: relative;
+    left: 10px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .boton-elimiarTodo {
+    right: 60px;
+    padding: 8px 20px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .total {
+    left: 50px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .boton-comprar {
+    left: 70px;
+    padding: 8px 25px;
+  }
 }
 @media (min-width: 300px) and (max-width: 700px) {
   body main .buscador img {
@@ -544,6 +591,24 @@ body .footer {
   body main .contenedor-modal .modal--div .cont--img--info .titulo--modal button {
     letter-spacing: 0;
     font-size: 12px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .modal-info-carrito .div-info-carrito .imagen-modal {
+    position: relative;
+    right: 50px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .modal-info-carrito .div-info-carrito p {
+    font-size: 20px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .boton-elimiarTodo {
+    right: 40px;
+    padding: 7px 10px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .total {
+    left: 30px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .boton-comprar {
+    left: 50px;
+    padding: 7px 20px;
   }
 }
 @media (min-width: 300px) and (max-width: 575px) {
@@ -593,27 +658,108 @@ body .footer {
     right: 20px;
     width: 180px;
   }
+  body main .contenedor-modal-carrito .modal-div-carrito .modal-info-carrito .div-info-carrito .imagen-modal {
+    width: 60px;
+    height: 80px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .modal-info-carrito .div-info-carrito p {
+    font-size: 18px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .modal-info-carrito .div-info-carrito .borrar {
+    width: 30px;
+    height: 30px;
+    left: 10px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .boton-elimiarTodo {
+    right: 10px;
+    padding: 7px 5px;
+    font-size: 12px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .total {
+    font-size: 16px;
+    left: 20px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .boton-comprar {
+    left: 30px;
+    padding: 7px 15px;
+  }
 }
-@media (min-width: 300px) and (max-width: 400px) {
+@media (min-width: 300px) and (max-width: 403px) {
   body main .contenedor--libro .tiutlo-secundario {
     width: 300px;
+  }
+  body main .contenedor-modal .modal--div {
+    max-height: 100%;
   }
   body main .contenedor-modal .modal--div .cerrarModal {
     margin-right: 20px;
   }
   body main .contenedor-modal .modal--div .cont-img-precio img {
     position: relative;
-    bottom: 50px;
+    bottom: 20px;
     width: 70px;
     height: 120px;
   }
   body main .contenedor-modal .modal--div .cont-img-precio .precio {
     position: relative;
-    top: 140px;
+    top: -40px;
     font-size: 12px;
   }
+  body main .contenedor-modal-carrito .modal-div-carrito .titulo-carrito {
+    font-size: 30px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .modal-info-carrito {
+    overflow-x: hidden;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .modal-info-carrito::-webkit-scrollbar {
+    width: 3px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .modal-info-carrito::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .modal-info-carrito .div-info-carrito .imagen-modal {
+    width: 50px;
+    height: 50px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .modal-info-carrito .div-info-carrito p {
+    font-size: 14px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .modal-info-carrito .div-info-carrito .precio {
+    left: 0px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .modal-info-carrito .div-info-carrito .borrar {
+    width: 25px;
+    height: 25px;
+    left: 0;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .boton-elimiarTodo {
+    position: relative;
+    top: 33px;
+    left: 90px;
+    padding: 4px 2px;
+    font-size: 10px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .total {
+    font-size: 14px;
+    position: absolute;
+    top: 430px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .boton-comprar {
+    font-size: 10px;
+    position: relative;
+    top: -10px;
+    left: -40px;
+    padding: 4px 10px;
+  }
 }
-@media (min-width: 300px) and (max-width: 340px) {
+@media (min-width: 300px) and (max-width: 375px) {
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .boton-elimiarTodo {
+    position: relative;
+    top: 33px;
+    left: 75px;
+  }
+}
+@media (min-width: 300px) and (max-width: 345px) {
   body main .contenedor-modal .modal--div .cerrarModal {
     margin-right: 20px;
   }
@@ -622,7 +768,7 @@ body .footer {
   }
   body main .contenedor-modal .modal--div .cont-img-precio .precio {
     position: relative;
-    top: 200px;
+    top: 215px;
     left: 50px;
     font-size: 12px;
   }
@@ -637,6 +783,11 @@ body .footer {
     position: relative;
     left: 20px;
     width: 180px;
+  }
+  body main .contenedor-modal-carrito .modal-div-carrito .botones .boton-elimiarTodo {
+    position: relative;
+    top: 33px;
+    left: 60px;
   }
 }
 .inicioSesion {

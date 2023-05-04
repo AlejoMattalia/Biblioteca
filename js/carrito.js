@@ -35,7 +35,7 @@ const carritoModal = () => {
                     <p class="modal-diseño">${libro.titulo}</p>
                 </div>
                 <div class="div-precio col-3">
-                    <p class="modal-diseño">$${libro.precio}</p>
+                    <p class="modal-diseño precio">$${libro.precio}</p>
                 </div>
                 <div class="borrar-contenedor col-2">
                     <img src="img/basura.png" alt="trash" class="borrar">
