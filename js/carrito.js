@@ -165,7 +165,7 @@ const carritoModal = () => {
                 }
 
                 if (carrito.length === 0) {
-                    borrarTodosDatos()
+                    borrarTodosDatos();
                 }
                 contador();
             });

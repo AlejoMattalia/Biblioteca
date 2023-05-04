@@ -21,13 +21,9 @@ body {
         z-index: 100;
         width: $cienPorciento;
         background-color: transparent;
-        // background-color: rgba(0, 0, 0, 0.8);
         position: fixed;
 
         .boton-iniciar {
-            // position: absolute;
-            // top: 20px;
-            // right: 0;
             letter-spacing: 1px;
             font-weight: $fontWeight;
             border: 2px solid $colorPrincipal;
@@ -116,6 +112,21 @@ body {
                 background-color: #fff;
                 border-radius: 20px;
                 display: none;
+                max-height: 300px;
+                overflow: auto;
+                scrollbar-width: thin;
+                scroll-snap-stop: 90%;
+                scrollbar-color: #ffffff #fff;
+                
+
+                &::-webkit-scrollbar {
+                    width: 4px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: transparent;
+                    border-radius: 4px;
+                }
 
                 li {
                     cursor: pointer;
@@ -521,11 +532,12 @@ body {
                             top: 10px;
                             font-size: 14px;
                         }
+
                         .total {
                             top: 15px;
                             font-size: 22px;
                         }
-    
+
                         .boton-comprar {
                             top: 0px;
                             left: 90px;
@@ -563,16 +575,17 @@ body {
                             .informacionLibroModal {
                                 height: 280px;
                                 overflow: auto;
+                                overflow-x: hidden;
                                 scrollbar-width: thin;
                                 scrollbar-color: #ccc #fff;
 
                                 &::-webkit-scrollbar {
-                                    width: 8px;
+                                    width: 4px;
                                 }
 
                                 &::-webkit-scrollbar-thumb {
                                     background-color: #039be5;
-                                    border-radius: 4px;
+                                    border-radius: 2px;
                                 }
                             }
 
@@ -597,15 +610,16 @@ body {
                             }
                         }
                     }
-    
+
                     .botones {
                         .boton-elimiarTodo {
                             font-size: 14px;
                         }
+
                         .total {
                             font-size: 22px;
                         }
-    
+
                         .boton-comprar {
                             left: 90px;
                             font-size: 14px;
@@ -706,7 +720,7 @@ body {
                                 font-size: 13px;
                                 color: #fff;
                                 letter-spacing: 1px;
-        
+
                                 span {
                                     font-size: 16px;
                                 }
@@ -717,30 +731,31 @@ body {
             }
 
             .contenedor-modal-carrito {
-                .modal-div-carrito {   
+                .modal-div-carrito {
                     .modal-info-carrito {
                         .div-info-carrito {
                             .imagen-modal {
-                               position: relative;
-                               right: 20px;
+                                position: relative;
+                                right: 20px;
                             }
-                            .precio{
+
+                            .precio {
                                 position: relative;
                                 left: 10px;
                             }
                         }
                     }
-     
+
                     .botones {
                         .boton-elimiarTodo {
                             right: 60px;
                             padding: 8px 20px;
                         }
-    
+
                         .total {
                             left: 50px;
                         }
-    
+
                         .boton-comprar {
                             left: 70px;
                             padding: 8px 25px;
@@ -808,23 +823,23 @@ body {
                                 position: relative;
                                 right: 50px;
                             }
-    
+
                             p {
                                 font-size: 20px;
                             }
                         }
                     }
-    
+
                     .botones {
                         .boton-elimiarTodo {
                             right: 40px;
                             padding: 7px 10px;
                         }
-    
+
                         .total {
                             left: 30px;
                         }
-    
+
                         .boton-comprar {
                             left: 50px;
                             padding: 7px 20px;
@@ -884,13 +899,14 @@ body {
                         margin-top: 10px;
                         margin-right: 10px;
                     }
+
                     .cont-img-precio {
                         img {
                             width: 100px;
                             height: 200px;
                         }
 
-                        .precio{
+                        .precio {
                             font-size: 15px;
                         }
                     }
@@ -900,6 +916,7 @@ body {
                             position: relative;
                             right: 60px;
                         }
+
                         .titulo--modal {
                             button {
                                 position: relative;
@@ -919,11 +936,11 @@ body {
                                 width: 60px;
                                 height: 80px;
                             }
-    
+
                             p {
                                 font-size: 18px;
                             }
-    
+
                             .borrar {
                                 width: 30px;
                                 height: 30px;
@@ -931,19 +948,19 @@ body {
                             }
                         }
                     }
-    
+
                     .botones {
                         .boton-elimiarTodo {
                             right: 10px;
                             padding: 7px 5px;
                             font-size: 12px;
                         }
-    
+
                         .total {
                             font-size: 16px;
                             left: 20px;
                         }
-    
+
                         .boton-comprar {
                             left: 30px;
                             padding: 7px 15px;
@@ -968,9 +985,11 @@ body {
             .contenedor-modal {
                 .modal--div {
                     max-height: 100%;
+
                     .cerrarModal {
                         margin-right: 20px;
                     }
+
                     .cont-img-precio {
                         img {
                             position: relative;
@@ -979,7 +998,7 @@ body {
                             height: 120px;
                         }
 
-                        .precio{
+                        .precio {
                             position: relative;
                             top: -40px;
                             font-size: 12px;
@@ -990,36 +1009,37 @@ body {
 
             .contenedor-modal-carrito {
                 .modal-div-carrito {
-    
+
                     .titulo-carrito {
                         font-size: 30px;
                     }
-    
+
                     .modal-info-carrito {
                         overflow-x: hidden;
+
                         &::-webkit-scrollbar {
                             width: 3px;
                         }
-    
+
                         &::-webkit-scrollbar-thumb {
                             border-radius: 1px;
                         }
-    
+
                         .div-info-carrito {
-                            
+
                             .imagen-modal {
                                 width: 50px;
                                 height: 50px;
                             }
-    
+
                             p {
                                 font-size: 14px;
                             }
 
-                            .precio{
+                            .precio {
                                 left: 0px;
                             }
-    
+
                             .borrar {
                                 width: 25px;
                                 height: 25px;
@@ -1027,7 +1047,7 @@ body {
                             }
                         }
                     }
-    
+
                     .botones {
                         .boton-elimiarTodo {
                             position: relative;
@@ -1036,13 +1056,13 @@ body {
                             padding: 4px 2px;
                             font-size: 10px;
                         }
-    
+
                         .total {
                             font-size: 14px;
                             position: absolute;
                             top: 430px;
                         }
-    
+
                         .boton-comprar {
                             font-size: 10px;
                             position: relative;
@@ -1056,6 +1076,7 @@ body {
         }
     }
 }
+
 @media (min-width: 300px) and (max-width: 375px) {
     body {
         main {
@@ -1073,6 +1094,7 @@ body {
         }
     }
 }
+
 @media (min-width: 300px) and (max-width: 345px) {
     body {
         main {
@@ -1081,23 +1103,25 @@ body {
                     .cerrarModal {
                         margin-right: 20px;
                     }
+
                     .cont-img-precio {
                         img {
                             display: none;
                         }
 
-                        .precio{
+                        .precio {
                             position: relative;
                             top: 215px;
                             left: 50px;
                             font-size: 12px;
                         }
                     }
+
                     .cont--img--info {
                         position: relative;
                         right: 30px;
 
-                        h2{
+                        h2 {
                             right: 0px;
                         }
 
@@ -1108,7 +1132,7 @@ body {
                                 width: 180px;
                             }
                         }
-                    } 
+                    }
                 }
             }
 
